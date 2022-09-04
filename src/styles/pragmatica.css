@@ -1,0 +1,122 @@
+/*
+* Pragmatica Regular
+*/
+
+@font-face {
+  font-family: 'Pragmatica';
+  src: url('/fonts/Pragmatica-Book.eot');
+  src: local('Pragmatica Book'), local('Pragmatica-Book'),
+    url('/fonts/Pragmatica-Book.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Pragmatica-Book.woff2') format('woff2'), url('/fonts/Pragmatica-Book.woff') format('woff'),
+    url('/fonts/Pragmatica-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pragmatica';
+  src: url('/fonts/Pragmatica-Medium.eot');
+  src: local('Pragmatica Medium'), local('Pragmatica-Medium'),
+    url('/fonts/Pragmatica-Medium.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Pragmatica-Medium.woff2') format('woff2'), url('/fonts/Pragmatica-Medium.woff') format('woff'),
+    url('/fonts/Pragmatica-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pragmatica';
+  src: url('/fonts/Pragmatica-Bold.eot');
+  src: local('Pragmatica Bold'), local('Pragmatica-Bold'),
+    url('/fonts/Pragmatica-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Pragmatica-Bold.woff2') format('woff2'), url('/fonts/Pragmatica-Bold.woff') format('woff'),
+    url('/fonts/Pragmatica-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pragmatica';
+  src: url('/fonts/Pragmatica-ExtraBold.eot');
+  src: local('Pragmatica ExtraBold'), local('Pragmatica-ExtraBold'),
+    url('/fonts/Pragmatica-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Pragmatica-ExtraBold.woff2') format('woff2'), url('/fonts/Pragmatica-ExtraBold.woff') format('woff'),
+    url('/fonts/Pragmatica-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pragmatica';
+  src: url('/fonts/Pragmatica-Black.eot');
+  src: local('Pragmatica Black'), local('Pragmatica-Black'),
+    url('/fonts/Pragmatica-Black.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Pragmatica-Black.woff2') format('woff2'), url('/fonts/Pragmatica-Black.woff') format('woff'),
+    url('/fonts/Pragmatica-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/*
+* Pragmatica Extended
+*/
+
+@font-face {
+  font-family: 'Pragmatica Extended';
+  src: url('/fonts/PragmaticaExtended-Book.eot');
+  src: local('Pragmatica Extended Book'), local('PragmaticaExtended-Book'),
+    url('/fonts/PragmaticaExtended-Book.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/PragmaticaExtended-Book.woff2') format('woff2'),
+    url('/fonts/PragmaticaExtended-Book.woff') format('woff'),
+    url('/fonts/PragmaticaExtended-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pragmatica Extended';
+  src: url('/fonts/PragmaticaExtended-Medium.eot');
+  src: local('Pragmatica Extended Medium'), local('PragmaticaExtended-Medium'),
+    url('/fonts/PragmaticaExtended-Medium.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/PragmaticaExtended-Medium.woff2') format('woff2'),
+    url('/fonts/PragmaticaExtended-Medium.woff') format('woff'),
+    url('/fonts/PragmaticaExtended-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pragmatica Extended';
+  src: url('/fonts/PragmaticaExtended-Bold.eot');
+  src: local('Pragmatica Extended Bold'), local('PragmaticaExtended-Bold'),
+    url('/fonts/PragmaticaExtended-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/PragmaticaExtended-Bold.woff2') format('woff2'),
+    url('/fonts/PragmaticaExtended-Bold.woff') format('woff'),
+    url('/fonts/PragmaticaExtended-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pragmatica Extended';
+  src: url('/fonts/PragmaticaExtended-Black.eot');
+  src: local('Pragmatica Extended Black'), local('PragmaticaExtended-Black'),
+    url('/fonts/PragmaticaExtended-Black.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/PragmaticaExtended-Black.woff2') format('woff2'),
+    url('/fonts/PragmaticaExtended-Black.woff') format('woff'),
+    url('/fonts/PragmaticaExtended-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pragmatica Extended';
+  src: url('/fonts/PragmaticaExtended-ExtraBoldObl.eot');
+  src: local('Pragmatica Extended ExtraBold Oblique'), local('/fonts/PragmaticaExtended-ExtraBoldObl'),
+    url('/fonts/PragmaticaExtended-ExtraBoldObl.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/PragmaticaExtended-ExtraBoldObl.woff2') format('woff2'),
+    url('/fonts/PragmaticaExtended-ExtraBoldObl.woff') format('woff'),
+    url('/fonts/PragmaticaExtended-ExtraBoldObl.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}

@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Untitled Sans', 'system-ui';
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', 'system-ui';
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'system-ui', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: -0.02rem !important;
+}
+
+h1,
+h2 {
+  letter-spacing: -0.06rem;
+}
+
+h3 {
+  font-family: 'Pragmatica Extended', sans-serif !important;
+  font-weight: 500;
+  letter-spacing: -0.08rem !important;
+}
+
+svg {
+  display: block;
+  vertical-align: middle;
+}
+
+html,
+body,
+#root,
+#__next,
+#__next > div,
+.theme-0 {
+  height: 100%;
+}
+
+#__next {
+  position: relative;
+  z-index: 0;
+}
