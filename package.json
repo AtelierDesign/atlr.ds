@@ -1,6 +1,6 @@
 {
   "name": "atlr.ds",
-  "packageManager": "yarn@3.2.2",
+  "packageManager": "npm@8.1.0",
   "version": "0.0.1",
   "description": "Component library for shared UI @AtelierDesign",
   "main": "dist/index.js",
