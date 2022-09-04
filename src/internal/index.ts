@@ -11,6 +11,7 @@ export { Container } from '../components/Container';
 // Internal components
 export * from './ColorSystem';
 export * from './BasicAtelierToast';
+export * from './DefaultDialog';
 export * from './DarkThemeButton';
 export * from './ThemeSwitch';
 export * from './HeroDisplay';

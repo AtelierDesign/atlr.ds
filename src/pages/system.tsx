@@ -23,7 +23,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/Tabs';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/Accordion';
 
 // internals..
-import { BasicAtelierToast, ColorSystem, ThemeSwitch } from '../internal';
+import { BasicAtelierToast, ColorSystem, DefaultDialog, ThemeSwitch } from '../internal';
 import { ChatBubbleIcon, GitHubLogoIcon, GlobeIcon, TwitterLogoIcon } from '@radix-ui/react-icons';
 
 function System() {
@@ -960,6 +960,21 @@ function System() {
           </Section>
         </Box>
         {/*END !  TOAST*/}
+
+        {/* <!-- BEGIN !  DIALOG --> */}
+        <Box css={{ bc: '$loContrast' }}>
+          <Section size="3">
+            <Container size="2" css={{ paddingRight: '0', paddingTop: '15px', paddingBottom: '15px' }}>
+              <Badge size="2" variant="orange">
+                Dialog®
+              </Badge>
+            </Container>
+            <Container size="2" css={{ marginBottom: '10px' }}>
+              <DefaultDialog />
+            </Container>
+          </Section>
+        </Box>
+        {/*END !  DIALOG*/}
 
         {/* <!-- BEGIN COLOR SYSTEM --> */}
         <ColorSystem />
