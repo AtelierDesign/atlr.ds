@@ -20,19 +20,19 @@ export const DefaultDialog = () => {
         </DialogTrigger>
 
         <DialogContent>
-          <DialogTitle>Default Dialog Component [ title ]</DialogTitle>
+          <DialogTitle>Default Dialog</DialogTitle>
           <DialogDescription>Make changes to your profile here. [ Description ]</DialogDescription>
 
-          <Flex css={{ marginTop: 25, justifyContent: 'flex-end' }}>
+          <Flex css={{ marginTop: 25, justifyContent: 'space-between' }}>
             <DialogClose asChild>
-              <Button variant="green">Save changes</Button>
+              <IconButton aria-label="Close">
+                <Cross2Icon />
+              </IconButton>
+            </DialogClose>
+            <DialogClose asChild>
+              <Button>Save changes</Button>
             </DialogClose>
           </Flex>
-          <DialogClose asChild>
-            <IconButton aria-label="Close">
-              <Cross2Icon />
-            </IconButton>
-          </DialogClose>
         </DialogContent>
       </Dialog>
     </>

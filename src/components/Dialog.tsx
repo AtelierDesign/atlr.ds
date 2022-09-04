@@ -56,16 +56,18 @@ export const Content = React.forwardRef<React.ElementRef<typeof StyledContent>, 
 
 const StyledTitle = styled(DialogPrimitive.Title, {
   margin: 0,
-  fontFamily: '$pragmaticaExtended',
+  fontFamily: '$pragmatica',
   fontWeight: 500,
   color: '$mauve12',
   fontSize: 17,
 });
 
 const StyledDescription = styled(DialogPrimitive.Description, {
+  fontFamily: '$inter',
+  fontWeight: 400,
+  fontSize: 14,
   margin: '10px 0 20px',
   color: mauve.mauve11,
-  fontSize: 15,
   lineHeight: 1.5,
 });
 
