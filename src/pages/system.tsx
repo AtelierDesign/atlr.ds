@@ -19,12 +19,15 @@ import { Sup } from '../components/Sup';
 import { Sub } from '../components/Sub';
 import { Grid } from '../components/Grid';
 import { AtelierSwitch } from '../components/Switch';
+import { Checkbox, CheckboxIndicator, CheckboxLabel } from '../components/Checkbox';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/Tabs';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/Accordion';
 
 // internals..
 import { BasicAtelierToast, ColorSystem, DefaultDialog, ThemeSwitch } from '../internal';
 import { ChatBubbleIcon, GitHubLogoIcon, GlobeIcon, TwitterLogoIcon } from '@radix-ui/react-icons';
+import { BasicAtelierToast, ColorSystem, DefaultCollapse, ThemeSwitch } from '../internal';
+import { ChatBubbleIcon, GitHubLogoIcon, GlobeIcon, TwitterLogoIcon, CheckIcon } from '@radix-ui/react-icons';
 
 function System() {
   return (
@@ -825,6 +828,49 @@ function System() {
           </Section>
         </Box>
         {/* <!-- END ! SWITCH --> */}
+
+        {/* <!-- BEGIN CheckBox--> */}
+        <Box css={{ bc: '$loContrast' }}>
+          <Section size="3">
+            <Container size="2" css={{ paddingRight: '0', paddingTop: '15px', paddingBottom: '15px' }}>
+              <Badge size="2" variant="green">
+                Checkbox®
+              </Badge>
+            </Container>
+
+            <Container size="2" css={{ marginBottom: '10px' }}>
+              <form>
+                <Flex css={{ alignItems: 'center' }}>
+                  <Checkbox defaultChecked id="c1">
+                    <CheckboxIndicator>
+                      <CheckIcon />
+                    </CheckboxIndicator>
+                  </Checkbox>
+                  <CheckboxLabel css={{ paddingLeft: 15 }} htmlFor="c1">
+                    Accept terms and conditions.
+                  </CheckboxLabel>
+                </Flex>
+              </form>
+            </Container>
+          </Section>
+        </Box>
+        {/* <!-- END ! CheckBox --> */}
+
+        {/* <!-- BEGIN Collapse--> */}
+        <Box css={{ bc: '$loContrast' }}>
+          <Section size="3">
+            <Container size="2" css={{ paddingRight: '0', paddingTop: '15px', paddingBottom: '15px' }}>
+              <Badge size="2" variant="green">
+                Collapse®
+              </Badge>
+            </Container>
+
+            <Container size="2" css={{ marginBottom: '10px' }}>
+              <DefaultCollapse />
+            </Container>
+          </Section>
+        </Box>
+        {/* <!-- END ! Collapse --> */}
 
         {/* <!-- BEGIN TABS --> */}
         <Box css={{ bc: '$loContrast' }}>
