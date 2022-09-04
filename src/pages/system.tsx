@@ -24,10 +24,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/Tabs';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/Accordion';
 
 // internals..
-import { BasicAtelierToast, ColorSystem, DefaultDialog, ThemeSwitch } from '../internal';
-import { ChatBubbleIcon, GitHubLogoIcon, GlobeIcon, TwitterLogoIcon } from '@radix-ui/react-icons';
-import { BasicAtelierToast, ColorSystem, DefaultCollapse, ThemeSwitch } from '../internal';
-import { ChatBubbleIcon, GitHubLogoIcon, GlobeIcon, TwitterLogoIcon, CheckIcon } from '@radix-ui/react-icons';
+import { BasicAtelierToast, ColorSystem, DefaultCollapse, DefaultDialog, ThemeSwitch } from '../internal';
+import { ChatBubbleIcon, CheckIcon, GitHubLogoIcon, GlobeIcon, TwitterLogoIcon } from '@radix-ui/react-icons';
 
 function System() {
   return (
