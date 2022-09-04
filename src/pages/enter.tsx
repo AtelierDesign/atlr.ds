@@ -9,8 +9,7 @@ import { HeadingText } from '../components/HeadingText';
 import { Button } from '../components/Button';
 import { Flex } from '../components/Flex';
 import { AppBar } from '../components/AppBar';
-import { ThemeSwitch } from '../internal/ThemeSwitch';
-import { TimeCode } from '../internal/TimeCode';
+import { ThemeSwitch, TimeCode } from '../internal';
 import mainBackdrop from '../../public/images/main.png';
 
 function Enter() {
