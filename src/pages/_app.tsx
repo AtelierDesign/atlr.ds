@@ -32,7 +32,7 @@ const globalStyles = globalCss(res, {
 
 const App = ({ Component, pageProps }: AppProps) => {
   globalStyles();
-
+  
   return (
     <>
       <Head>
