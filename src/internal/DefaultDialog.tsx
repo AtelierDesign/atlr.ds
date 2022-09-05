@@ -6,6 +6,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '../components/Dialog';
+import React from 'react';
 import { Button } from '../components/Button';
 import { Flex } from '../components/Flex';
 import { IconButton } from '../components/IconButton';

@@ -35,8 +35,6 @@ export const Button = styled('button', {
   },
 
   variants: {
-    // size...
-
     size: {
       '1': {
         borderRadius: '6px',
@@ -60,8 +58,6 @@ export const Button = styled('button', {
         lineHeight: '$sizes$7',
       },
     },
-
-    // colours... //
 
     variant: {
       atelier: {
@@ -126,6 +122,18 @@ export const Button = styled('button', {
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
           backgroundColor: '$slate4',
           boxShadow: 'inset 0 0 0 1px $colors$slate8',
+        },
+      },
+      transparent: {
+        backgroundColor: 'transparent',
+        boxShadow: 'none',
+        color: '$gray11',
+        '&:hover': {},
+        '&:active': {
+          backgroundColor: 'hsla(0,100%,100%,.3)',
+        },
+        '&:focus': {
+          boxShadow: 'inset 0 0 0 1px hsla(0,100%,100%,.35), 0 0 0 1px hsla(0,100%,100%,.35)',
         },
       },
       ghostAtelier: {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { CSS, keyframes, styled } from '../../stitches.config';
-import { blackA, mauve } from '@radix-ui/colors';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 
 const overlayShow = keyframes({
@@ -14,9 +13,17 @@ const contentShow = keyframes({
 });
 
 const StyledOverlay = styled(DialogPrimitive.Overlay, {
-  backgroundColor: blackA.blackA9,
+  backgroundColor: '$blackA9',
   position: 'fixed',
   inset: 0,
+  background: 'rgba(0 0 0 / 0.5)',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  display: 'grid',
+  placeItems: 'center',
+  overflowY: 'auto',
   '@media (prefers-reduced-motion: no-preference)': {
     animation: `${overlayShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
   },
@@ -42,7 +49,6 @@ const StyledContent = styled(DialogPrimitive.Content, {
 
 type DialogPrimitiveProps = React.ComponentProps<typeof DialogPrimitive.Root>;
 type DialogProps = DialogPrimitiveProps & { css?: CSS };
-
 export const Content = React.forwardRef<React.ElementRef<typeof StyledContent>, DialogProps>(
   ({ children, ...props }, forwardedRef) => (
     <DialogPrimitive.Portal>
@@ -67,49 +73,14 @@ const StyledDescription = styled(DialogPrimitive.Description, {
   fontWeight: 400,
   fontSize: 14,
   margin: '10px 0 20px',
-  color: mauve.mauve11,
+  color: '$mauve12',
   lineHeight: 1.5,
 });
 
-// Exports
+// exports
 export const Dialog = DialogPrimitive.Root;
 export const DialogTrigger = DialogPrimitive.Trigger;
 export const DialogContent = Content;
 export const DialogTitle = StyledTitle;
 export const DialogDescription = StyledDescription;
 export const DialogClose = DialogPrimitive.Close;
-
-/*
-const DialogDemo = () => (
-  <Dialog>
-    <DialogTrigger asChild>
-      <Button size="large">Edit profile</Button>
-    </DialogTrigger>
-    <DialogContent >
-      <DialogTitle>Edit profile</DialogTitle>
-      <DialogDescription>
-        Make changes to your profile here. Click save when you're done.
-      </DialogDescription>
-      <Fieldset>
-        <Label htmlFor="name">Name</Label>
-        <Input id="name" defaultValue="Pedro Duarte" />
-      </Fieldset>
-      <Fieldset>
-        <Label htmlFor="username">Username</Label>
-        <Input id="username" defaultValue="@peduarte" />
-      </Fieldset>
-      <Flex css={{ marginTop: 25, justifyContent: 'flex-end' }}>
-        <DialogClose asChild>
-          <Button variant="green">Save changes</Button>
-        </DialogClose>
-      </Flex>
-      <DialogClose asChild>
-        <IconButton aria-label="Close">
-          <Cross2Icon />
-        </IconButton>
-      </DialogClose>
-    </DialogContent>
-  </Dialog>
-);
-
- */

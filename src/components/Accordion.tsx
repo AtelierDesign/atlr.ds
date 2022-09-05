@@ -3,14 +3,10 @@ import { CSS, keyframes, styled } from '../../stitches.config';
 import { ChevronDownIcon } from '@radix-ui/react-icons';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 
-
-
-
-
 /*
-* <!--
-* Accordion.ROOT
-* -->
+ * <!--
+ * Accordion.ROOT
+ * -->
  */
 const StyledAccordion = styled(AccordionPrimitive.Root, {
   border: '2px solid $gray4',
@@ -18,7 +14,6 @@ const StyledAccordion = styled(AccordionPrimitive.Root, {
   width: '100%',
   backgroundColor: '$translucent',
 });
-
 
 // begin styled....
 const slideDown = keyframes({
@@ -30,31 +25,23 @@ const slideUp = keyframes({
   to: { height: 0 },
 });
 
-
 type AccordionPrimitiveProps = React.ComponentProps<typeof AccordionPrimitive.Root>;
 type AccordionProps = AccordionPrimitiveProps & { css?: CSS };
-
 export const Accordion = React.forwardRef<React.ElementRef<typeof StyledAccordion>, AccordionProps>(
   ({ children, ...props }, forwardedRef) => (
-    <StyledAccordion
-      ref={forwardedRef}
-      {...props}
-      {...(props.type === 'single' ? { collapsible: true } : {})}
-    >
+    <StyledAccordion ref={forwardedRef} {...props} {...(props.type === 'single' ? { collapsible: true } : {})}>
       {children}
     </StyledAccordion>
   ),
 );
 
-
 /*
-* <!--
-* Accordion.ITEM
-* -->
+ * <!--
+ * Accordion.ITEM
+ * -->
  */
 type AccordionItemPrimitiveProps = React.ComponentProps<typeof AccordionPrimitive.Item>;
 type AccordionItemProps = AccordionItemPrimitiveProps & { css?: CSS };
-
 
 const StyledItem = styled(AccordionPrimitive.Item, {
   overflow: 'hidden',
@@ -79,18 +66,18 @@ const StyledItem = styled(AccordionPrimitive.Item, {
 });
 
 // export const AccordionItem = StyledItem;
-export const AccordionItem = React.forwardRef<React.ElementRef<typeof StyledItem>,
-  AccordionItemProps>(({ children, ...props }, forwardedRef) => (
-  <StyledItem {...props} ref={forwardedRef}>
-    {children}
-  </StyledItem>
-));
-
+export const AccordionItem = React.forwardRef<React.ElementRef<typeof StyledItem>, AccordionItemProps>(
+  ({ children, ...props }, forwardedRef) => (
+    <StyledItem {...props} ref={forwardedRef}>
+      {children}
+    </StyledItem>
+  ),
+);
 
 /*
-* <!--
-* Accordion.TRIGGER
-* -->
+ * <!--
+ * Accordion.TRIGGER
+ * -->
  */
 const StyledHeader = styled(AccordionPrimitive.Header, {
   paddingTop: '3px',
@@ -120,7 +107,6 @@ const StyledTrigger = styled(AccordionPrimitive.Trigger, {
   color: '$mauve12',
   width: '100%',
   borderRadius: '8px',
-
 
   '&[data-state="closed"]': {
     backgroundColor: '$slate1',
@@ -174,34 +160,31 @@ const StyledTrigger = styled(AccordionPrimitive.Trigger, {
   },
 });
 
-
 const StyledChevron = styled(ChevronDownIcon, {
   color: '$mauve12',
   transition: 'transform 300ms cubic-bezier(0.87, 0, 0.13, 1)',
   '[data-state=open] &': { transform: 'rotate(180deg)' },
 });
 
-
 // @types....
 type AccordionTriggerPrimitiveProps = React.ComponentProps<typeof AccordionPrimitive.Trigger>;
 type AccordionTriggerProps = AccordionTriggerPrimitiveProps & { css?: CSS };
 
-
-export const AccordionTrigger = React.forwardRef<React.ElementRef<typeof StyledTrigger>,
-  AccordionTriggerProps>(({ children, ...props }, forwardedRef) => (
-  <StyledHeader>
-    <StyledTrigger {...props} ref={forwardedRef}>
-      {children}
-      <StyledChevron />
-    </StyledTrigger>
-  </StyledHeader>
-));
-
+export const AccordionTrigger = React.forwardRef<React.ElementRef<typeof StyledTrigger>, AccordionTriggerProps>(
+  ({ children, ...props }, forwardedRef) => (
+    <StyledHeader>
+      <StyledTrigger {...props} ref={forwardedRef}>
+        {children}
+        <StyledChevron />
+      </StyledTrigger>
+    </StyledHeader>
+  ),
+);
 
 /*
-* <!--
-* Accordion.CONTENT
-* -->
+ * <!--
+ * Accordion.CONTENT
+ * -->
  */
 type AccordionContentPrimitiveProps = React.ComponentProps<typeof AccordionPrimitive.Content>;
 type AccordionContentProps = AccordionContentPrimitiveProps & { css?: CSS };
@@ -231,16 +214,15 @@ const StyledContentText = styled('div', {
   padding: '15px 20px',
 });
 
-
-export const AccordionContent = React.forwardRef<React.ElementRef<typeof StyledContent>,
-  AccordionContentProps>(({ children, ...props }, forwardedRef) => (
-  <StyledHeader>
-    <StyledContent {...props} ref={forwardedRef}>
-      <StyledContentText>{children}</StyledContentText>
-    </StyledContent>
-  </StyledHeader>
-));
-
+export const AccordionContent = React.forwardRef<React.ElementRef<typeof StyledContent>, AccordionContentProps>(
+  ({ children, ...props }, forwardedRef) => (
+    <StyledHeader>
+      <StyledContent {...props} ref={forwardedRef}>
+        <StyledContentText>{children}</StyledContentText>
+      </StyledContent>
+    </StyledHeader>
+  ),
+);
 
 /*
 !! All exports...

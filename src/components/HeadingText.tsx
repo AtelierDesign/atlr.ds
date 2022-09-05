@@ -17,6 +17,9 @@ export const HeadingText = styled('span', {
       },
       '3': {
         fontSize: '$8',
+        '@md': {
+          fontSize: '$7',
+        },
       },
       '4': {
         fontSize: '$9',
@@ -57,7 +60,6 @@ export const HeadingText = styled('span', {
         fontFamily: '$pragmatica',
       },
     },
-
 
     variant: {
       red: {

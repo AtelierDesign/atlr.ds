@@ -1,6 +1,4 @@
 import React from 'react';
-// import { Cross2Icon, DoubleArrowDownIcon, RowSpacingIcon } from '@radix-ui/react-icons';
-// import { IconButton } from '../components/IconButton';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '../components/Collapse';
 import { Text } from '../components/Text';
 import { Button } from '../components/Button';
@@ -16,7 +14,8 @@ const Repository = styled('div', {
   backgroundColor: '$mauve3',
   border: '1px solid $colors$mauve7',
   borderRadius: 8,
-  margin: '8px 0',
+  marginBottom: 4,
+  marginTop: 4,
   padding: 10,
 });
 
@@ -29,12 +28,6 @@ export const DefaultCollapse = () => {
         <Text css={{ color: '$mauve12', fontFamily: '$inter', fontSize: 13, fontWeight: 'bold' }}>
           @chvndler starred 5 repositories
         </Text>
-
-        {/* <!--
-        <CollapsibleTrigger asChild>
-          <IconButton>{open ? <Cross2Icon /> : <DoubleArrowDownIcon />}</IconButton>
-        </CollapsibleTrigger>
-        --> */}
 
         <CollapsibleTrigger asChild>
           <Button>{open ? <span>Show less</span> : <span>Show all</span>}</Button>

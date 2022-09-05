@@ -39,11 +39,13 @@ export const Badge = styled('span', {
   variants: {
     size: {
       '1': {
+        borderRadius: 6,
         height: '$4',
         px: '$1',
         fontSize: '$1',
       },
       '2': {
+        borderRadius: '8px',
         height: '$5',
         px: '$2',
         fontSize: '$2',
@@ -53,7 +55,6 @@ export const Badge = styled('span', {
       gray: {
         backgroundColor: '$gray3',
         border: '1px solid $gray5',
-        borderRadius: '8px',
         color: '$slate11',
         '&:focus': {
           boxShadow: 'inset 0 0 0 1px $colors$gray8, 0 0 0 1px $colors$gray8',
@@ -69,7 +70,6 @@ export const Badge = styled('span', {
       crimson: {
         backgroundColor: '$crimson3',
         border: '1px solid $crimson5',
-        borderRadius: '8px',
         color: '$crimson11',
         '&:focus': {
           boxShadow: 'inset 0 0 0 1px $colors$crimson8, 0 0 0 1px $colors$crimson8',
@@ -78,7 +78,6 @@ export const Badge = styled('span', {
       pink: {
         backgroundColor: '$pink3',
         border: '1px solid $pink5',
-        borderRadius: '8px',
         color: '$pink11',
         '&:focus': {
           boxShadow: 'inset 0 0 0 1px $colors$pink8, 0 0 0 1px $colors$pink8',
@@ -87,7 +86,6 @@ export const Badge = styled('span', {
       purple: {
         backgroundColor: '$purple3',
         border: '1px solid $purple5',
-        borderRadius: '8px',
         color: '$purple11',
         '&:focus': {
           boxShadow: 'inset 0 0 0 1px $colors$purple8, 0 0 0 1px $colors$purple8',
@@ -96,7 +94,6 @@ export const Badge = styled('span', {
       sky: {
         backgroundColor: '$sky3',
         border: '1px solid $sky5',
-        borderRadius: '8px',
         color: '$sky11',
         '&:focus': {
           boxShadow: 'inset 0 0 0 1px $colors$sky8, 0 0 0 1px $colors$sky8',
@@ -112,7 +109,6 @@ export const Badge = styled('span', {
       indigo: {
         backgroundColor: '$indigo3',
         border: '1px solid $indigo5',
-        borderRadius: '8px',
         color: '$indigo11',
         '&:focus': {
           boxShadow: 'inset 0 0 0 1px $colors$indigo8, 0 0 0 1px $colors$indigo8',
@@ -121,7 +117,6 @@ export const Badge = styled('span', {
       blue: {
         backgroundColor: '$blue3',
         border: '1px solid $blue5',
-        borderRadius: '8px',
         color: '$blue11',
         '&:focus': {
           boxShadow: 'inset 0 0 0 1px $colors$blue8, 0 0 0 1px $colors$blue8',
@@ -130,7 +125,6 @@ export const Badge = styled('span', {
       cyan: {
         backgroundColor: '$cyan3',
         border: '1px solid $cyan5',
-        borderRadius: '8px',
         color: '$cyan11',
         '&:focus': {
           boxShadow: 'inset 0 0 0 1px $colors$cyan8, 0 0 0 1px $colors$cyan8',
@@ -139,7 +133,6 @@ export const Badge = styled('span', {
       teal: {
         backgroundColor: '$teal3',
         border: '1px solid $teal5',
-        borderRadius: '8px',
         color: '$teal11',
         '&:focus': {
           boxShadow: 'inset 0 0 0 1px $colors$teal8, 0 0 0 1px $colors$teal8',
@@ -148,7 +141,6 @@ export const Badge = styled('span', {
       green: {
         backgroundColor: '$green3',
         border: '1px solid $green5',
-        borderRadius: '8px',
         color: '$green11',
         '&:focus': {
           boxShadow: 'inset 0 0 0 1px $colors$green8, 0 0 0 1px $colors$green8',
@@ -157,7 +149,6 @@ export const Badge = styled('span', {
       lime: {
         backgroundColor: '$lime3',
         border: '1px solid $lime5',
-        borderRadius: '8px',
         color: '$lime11',
         '&:focus': {
           boxShadow: 'inset 0 0 0 1px $colors$lime8, 0 0 0 1px $colors$lime8',
@@ -166,7 +157,6 @@ export const Badge = styled('span', {
       yellow: {
         backgroundColor: '$yellow3',
         border: '1px solid $yellow5',
-        borderRadius: '8px',
         color: '$yellow11',
         '&:focus': {
           boxShadow: 'inset 0 0 0 1px $colors$yellow8, 0 0 0 1px $colors$yellow8',
@@ -175,7 +165,6 @@ export const Badge = styled('span', {
       orange: {
         backgroundColor: '$orange3',
         border: '1px solid $orange5',
-        borderRadius: '8px',
         color: '$orange11',
         '&:focus': {
           boxShadow: 'inset 0 0 0 1px $colors$orange8, 0 0 0 1px $colors$orange8',
@@ -184,7 +173,6 @@ export const Badge = styled('span', {
       gold: {
         backgroundColor: '$gold3',
         border: '1px solid $gold5',
-        borderRadius: '8px',
         color: '$gold11',
         '&:focus': {
           boxShadow: 'inset 0 0 0 1px $colors$gold8, 0 0 0 1px $colors$gold8',
@@ -193,7 +181,6 @@ export const Badge = styled('span', {
       bronze: {
         backgroundColor: '$bronze3',
         border: '1px solid $bronze5',
-        borderRadius: '8px',
         color: '$bronze11',
         '&:focus': {
           boxShadow: 'inset 0 0 0 1px $colors$bronze8, 0 0 0 1px $colors$bronze8',

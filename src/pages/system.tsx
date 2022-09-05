@@ -24,7 +24,16 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/Tabs';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/Accordion';
 
 // internals..
-import { BasicAtelierToast, ColorSystem, DefaultCollapse, DefaultDialog, ThemeSwitch } from '../internal';
+import {
+  BasicAtelierToast,
+  ColorSystem,
+  DefaultCollapse,
+  DefaultDialog,
+  HoverCardExample,
+  SeparatorExample,
+  StyledCollapse,
+  ThemeSwitch,
+} from '../internal';
 import { ChatBubbleIcon, CheckIcon, GitHubLogoIcon, GlobeIcon, TwitterLogoIcon } from '@radix-ui/react-icons';
 
 function System() {
@@ -532,6 +541,41 @@ function System() {
         </Box>
         {/*END ! SPACE DEMO*/}
 
+        {/* <!-- BEGIN SEPARATOR --> */}
+        <Box css={{ height: 'auto' }}>
+          <Section size="3" css={{ bc: '$loContrast' }}>
+            <Container size="2" css={{ paddingRight: '0', paddingTop: '15px', paddingBottom: '15px' }}>
+              <Badge size="2" variant="lime">
+                Separator®
+              </Badge>
+            </Container>
+            <Container size="2" css={{ marginBottom: '10px' }}>
+              <SeparatorExample />
+            </Container>
+          </Section>
+        </Box>
+        {/*END ! SEPARATOR */}
+
+        {/* <!-- BEGIN HOVERCARD --> */}
+        <Box css={{ height: 'auto' }}>
+          <Section size="3" css={{ bc: '$loContrast' }}>
+            <Container size="2" css={{ paddingRight: '0', paddingTop: '15px', paddingBottom: '15px' }}>
+              <Badge size="2" variant="lime">
+                Hover Card®
+              </Badge>
+            </Container>
+            <Container size="2" css={{ marginBottom: '10px' }}>
+              <Flex direction="row" align="stretch" justify="start" wrap="wrap" gap="4" css={{ marginBottom: '30px' }}>
+                <HoverCardExample />
+                <Text size="2" css={{ lineHeight: '45px', fontFamily: '$inter', fontWeight: '500', color: '$mauve12' }}>
+                  Hover the profile image.
+                </Text>
+              </Flex>
+            </Container>
+          </Section>
+        </Box>
+        {/*END ! HOVERCARD */}
+
         {/* <!-- BEGIN TYPOGRAPHY --> */}
         <Box css={{ bc: '$loContrast' }}>
           <Section size="3">
@@ -777,6 +821,97 @@ function System() {
         </Box>
         {/* <!-- END! ICON BUTTON --> */}
 
+        {/* <!-- BADGE --> */}
+        <Box css={{ height: 'auto' }}>
+          <Section size="3" css={{ bc: '$loContrast' }}>
+            <Container size="2" css={{ paddingRight: '0', paddingTop: '15px', paddingBottom: '15px' }}>
+              <Badge size="2" variant="bronze">
+                Badge®
+              </Badge>
+            </Container>
+
+            <Container size="2" css={{ paddingRight: '0', paddingTop: '15px', paddingBottom: '15px' }}>
+              <Text
+                size={1}
+                css={{
+                  fontFamily: '$pragmatica',
+                  fontSize: '12px',
+                  fontWeight: 'bold',
+                  padding: '2px',
+                  paddingBottom: '12px',
+                  color: '$mauve9',
+                }}
+              >
+                size one
+              </Text>
+              <Flex direction="row" align="stretch" justify="start" wrap="wrap" gap="4" css={{ marginBottom: '30px' }}>
+                <Badge size="1" variant="gray">
+                  Hello
+                </Badge>
+                <Badge size="1" variant="lime">
+                  this is a
+                </Badge>
+                <Badge size="1" variant="sky">
+                  badge
+                </Badge>
+                <Badge size="1" variant="purple">
+                  Size 1
+                </Badge>
+                <Badge size="1" variant="orange">
+                  Badge Component
+                </Badge>
+              </Flex>
+
+              <Text
+                size={1}
+                css={{
+                  fontFamily: '$pragmatica',
+                  fontSize: '12px',
+                  fontWeight: 'bold',
+                  padding: '2px',
+                  paddingBottom: '12px',
+                  color: '$mauve9',
+                }}
+              >
+                size two
+              </Text>
+
+              <Flex direction="row" align="stretch" justify="start" wrap="wrap" gap="4" css={{ marginBottom: '30px' }}>
+                <Badge size="2" variant="indigo">
+                  Hello
+                </Badge>
+                <Badge size="2" variant="blue">
+                  this is a
+                </Badge>
+                <Badge size="2" variant="cyan">
+                  badge
+                </Badge>
+                <Badge size="2" variant="green">
+                  Size 2
+                </Badge>
+                <Badge size="2" variant="gold">
+                  Badge Component
+                </Badge>
+              </Flex>
+
+              <Text
+                size={2}
+                css={{
+                  fontFamily: '$pragmatica',
+                  fontSize: '12px',
+                  fontWeight: '400',
+                  padding: '2px',
+                  paddingBottom: '12px',
+                  color: '$mauve9',
+                }}
+              >
+                ..gray ..lime ..blue ..purple ..orange ..indigo ..cyan ..green ..gold
+              </Text>
+            </Container>
+          </Section>
+        </Box>
+        {/* END BADGE */}
+
         {/* <!-- BANNER COMPONENTS --> */}
         <Box css={{ height: 'auto' }}>
           <Section size="3" css={{ bc: '$loContrast' }}>
@@ -827,7 +962,7 @@ function System() {
         </Box>
         {/* <!-- END ! SWITCH --> */}
 
-        {/* <!-- BEGIN CheckBox--> */}
+        {/* <!-- BEGIN CHECKBOX --> */}
         <Box css={{ bc: '$loContrast' }}>
           <Section size="3">
             <Container size="2" css={{ paddingRight: '0', paddingTop: '15px', paddingBottom: '15px' }}>
@@ -852,9 +987,9 @@ function System() {
             </Container>
           </Section>
         </Box>
-        {/* <!-- END ! CheckBox --> */}
+        {/* <!-- END ! CHECKBOX --> */}
 
-        {/* <!-- BEGIN Collapse--> */}
+        {/* <!-- BEGIN COLLAPSE --> */}
         <Box css={{ bc: '$loContrast' }}>
           <Section size="3">
             <Container size="2" css={{ paddingRight: '0', paddingTop: '15px', paddingBottom: '15px' }}>
@@ -866,9 +1001,13 @@ function System() {
             <Container size="2" css={{ marginBottom: '10px' }}>
               <DefaultCollapse />
             </Container>
+            <Space size="2" />
+            <Container size="2" css={{ marginBottom: '10px' }}>
+              <StyledCollapse />
+            </Container>
           </Section>
         </Box>
-        {/* <!-- END ! Collapse --> */}
+        {/* <!-- END ! COLLAPSE --> */}
 
         {/* <!-- BEGIN TABS --> */}
         <Box css={{ bc: '$loContrast' }}>

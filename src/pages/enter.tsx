@@ -5,6 +5,7 @@ import { Box } from '../components/Box';
 import { Container } from '../components/Container';
 import { Canvas } from '../components/Canvas';
 import { BlurCanvas } from '../components/BlurCanvas';
+import { Text } from '../components/Text';
 import { HeadingText } from '../components/HeadingText';
 import { Button } from '../components/Button';
 import { Flex } from '../components/Flex';
@@ -26,9 +27,18 @@ function Enter() {
               textAlign: 'center',
             }}
           >
-            <HeadingText as="h3" size="1" css={{ color: '$mauve12', textAlign: 'center', paddingBottom: '10px' }}>
+            <Text
+              size="3"
+              css={{
+                fontFamily: '$pragmatica',
+                fontWeight: 'bold',
+                color: '$mauve12',
+                textAlign: 'center',
+                paddingBottom: '10px',
+              }}
+            >
               developer.atlrdsgn.com
-            </HeadingText>
+            </Text>
 
             <Link href="/system" passHref>
               <Button as="a" size="1" variant="atelier" css={{ fontFamily: '$pragmatica' }}>
@@ -75,7 +85,7 @@ function Enter() {
                   fontFamily: '$pragmatica',
                   fontWeight: 'bold',
                   lineHeight: '34px',
-                  color: '$mauveA6',
+                  color: '$mauveA9',
                   '&:hover': {
                     color: '$mauveA8',
                   },
