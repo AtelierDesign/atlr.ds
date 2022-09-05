@@ -1,5 +1,6 @@
 // internal components
 export * from './ColorSystem';
+export * from './Command-K';
 export * from './BasicAtelierToast';
 export * from './DefaultDialog';
 export * from './DefaultCollapse';

@@ -26,6 +26,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '..
 // internals..
 import {
   BasicAtelierToast,
+  CmdK,
   ColorSystem,
   DefaultCollapse,
   DefaultDialog,
@@ -1189,6 +1190,7 @@ function System() {
             Copyright © 2022 Atelier. All rights reserved.
           </Text>
         </Box>
+        <CmdK />
       </Box>
     </>
   );
