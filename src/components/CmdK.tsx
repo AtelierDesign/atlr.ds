@@ -1,3 +1,4 @@
+import React from 'react';
 import { keyframes, styled } from '../../stitches.config';
 import { Command } from 'cmdk';
 
@@ -59,7 +60,7 @@ const StyledInput = styled(Command.Input, {
   height: '38px',
   width: '100%',
   lineHeight: '$sizes$6',
-  fontFamily: '$pragmaticaExtended',
+  fontFamily: '$pragmatica',
   fontSize: '12px',
   fontWeight: '400',
   backgroundColor: '$loContrast',
@@ -75,7 +76,7 @@ const StyledInput = styled(Command.Input, {
 
   '&::placeholder': {
     color: '$mauve7',
-    fontFamily: '$pragmaticaExtended',
+    fontFamily: '$pragmatica',
     fontSize: '12px',
     fontWeight: '300',
     letterSpacing: 'normal',
@@ -121,7 +122,7 @@ const StyledInput = styled(Command.Input, {
 });
 
 const StyledList = styled(Command.List, {
-  fontFamily: '$chGrotesk',
+  fontFamily: '$ldGrotesk',
   fontWeight: '500',
   fontSize: '14px',
   letterSpacing: 'normal',
@@ -170,7 +171,7 @@ const StyledItem = styled(Command.Item, {
   backgroundColor: 'transparent',
   color: '$mauve9',
   borderRadius: '6px',
-  fontFamily: '$chGrotesk',
+  fontFamily: '$ldGrotesk',
   fontWeight: '500',
   fontSize: '13px',
   letterSpacing: 'normal',
@@ -194,7 +195,7 @@ const StyledSeparator = styled(Command.Separator, {
 });
 
 // exports...
-export const CommandDialog = StyledDialog;
+export const CommandDialog: any = StyledDialog;
 export const CommandInput = StyledInput;
 export const CommandEmpty = StyledNoResults;
 export const CommandGroup = StyledGroup;

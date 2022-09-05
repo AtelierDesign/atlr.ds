@@ -244,6 +244,7 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
       inter: '"Inter", sans-serif',
       mono: 'Söhne Mono, menlo, monospace',
       pragmatica: '"Pragmatica Extended", sans-serif',
+      ldGrotesk: '"LD Grotesk", sans-serif',
     },
     space: {
       1: '5px',

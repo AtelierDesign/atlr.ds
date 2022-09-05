@@ -10,17 +10,10 @@ import {
 import { styled } from '../../stitches.config';
 import { Box } from '../components/Box';
 import { Flex } from '../components/Flex';
-import {
-  ChatBubbleIcon,
-  CubeIcon,
-  GitHubLogoIcon,
-  SwitchIcon,
-  TwitterLogoIcon,
-  VideoIcon,
-} from '@radix-ui/react-icons';
+import { CubeIcon, GitHubLogoIcon, GlobeIcon, SwitchIcon, TwitterLogoIcon, VideoIcon } from '@radix-ui/react-icons';
+import React from 'react';
 import { Command } from 'cmdk';
 import { useRouter } from 'next/router';
-import React from 'react';
 import { useTheme } from 'next-themes';
 
 /**
@@ -42,24 +35,24 @@ const CommandBottomBar = styled('div', {
 });
 
 const CommandFooterText = styled('p', {
-  fontFamily: '$pragmaticaExtended',
-  fontWeight: '400',
+  fontFamily: '$pragmatica',
+  fontWeight: '500',
   fontSize: '10px',
-  letterSpacing: '0.02rem',
+  letterSpacing: '-0.02rem',
   color: '$mauve8',
   lineHeight: 'normal',
   textAlign: 'center',
 });
 
 /**
- * Command.Item.Blog
- * value = 'blog'
+ * Command.Item.Index
+ * value = 'home'
  */
-const Blog = () => {
+const Home = () => {
   const router = useRouter();
 
   return (
-    <CommandItem value="blog" onSelect={() => router.push('/blog')}>
+    <CommandItem value="home" onSelect={() => router.push('/')}>
       <Flex
         css={{
           boxSizing: 'border-box',
@@ -71,9 +64,9 @@ const Blog = () => {
         }}
       >
         <Box css={{ paddingTop: '6.2px', paddingRight: '5px', lineHeight: 'normal' }}>
-          <ChatBubbleIcon />
+          <GlobeIcon />
         </Box>
-        <span>blog</span>
+        <span>return home</span>
       </Flex>
     </CommandItem>
   );
@@ -83,11 +76,11 @@ const Blog = () => {
  * Command.Item.Projects
  * value = 'projects'
  */
-const Projects = () => {
+const Docs = () => {
   const router = useRouter();
 
   return (
-    <CommandItem value="projects" onSelect={() => router.push('/projects')}>
+    <CommandItem value="docs" onSelect={() => router.push('/releases')}>
       <Flex
         css={{
           boxSizing: 'border-box',
@@ -101,7 +94,7 @@ const Projects = () => {
         <Box css={{ paddingTop: '6.2px', paddingRight: '5px', lineHeight: 'normal' }}>
           <CubeIcon />
         </Box>
-        <span>projects</span>
+        <span>docs</span>
       </Flex>
     </CommandItem>
   );
@@ -248,8 +241,8 @@ export const CmdK = () => {
           <CommandInput value={search} onValueChange={setSearch} autoFocus placeholder="keyword" />
           <CommandList>
             <CommandGroup heading="index">
-              <Blog />
-              <Projects />
+              <Home />
+              <Docs />
               <Film />
               <Twitter />
               <GitHub />
@@ -261,7 +254,7 @@ export const CmdK = () => {
             <CommandEmpty>.. no results found. try another keyword.</CommandEmpty>
           </CommandList>
           <CommandBottomBar>
-            <CommandFooterText>chvndler.ch</CommandFooterText>
+            <CommandFooterText>© Atelier Design</CommandFooterText>
           </CommandBottomBar>
         </CommandDialog>
       </Command>
