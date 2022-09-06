@@ -6,7 +6,7 @@ import { Text } from '../components/Text';
 export const HoverCardExample = () => {
   return (
     <>
-      <HoverCard openDelay={300}>
+      <HoverCard openDelay={0}>
         <HoverCardTrigger asChild>
           <ImageTrigger href="https://twitter.com/radix_ui" target="_blank" rel="noreferrer noopener">
             <Img src="https://pbs.twimg.com/profile_images/1452849527111684099/tAIKpP7R_400x400.jpg" />

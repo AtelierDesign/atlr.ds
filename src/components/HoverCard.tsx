@@ -23,13 +23,12 @@ const slideLeftAndFade = keyframes({
 });
 
 const StyledContent = styled(HoverCardPrimitive.Content, {
+  zIndex: '999',
   borderRadius: 16,
   border: '1px solid $slate6',
   padding: 20,
   width: 260,
   backgroundColor: '$mauve1',
-  // boxShadow: 'hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px',
-
   boxShadow: '0px 3px 12px -4px rgba(0,0,0,0.56)',
   WebkitBoxShadow: '0px 3px 12px -4px rgba(0,0,0,0.56)',
 
@@ -48,9 +47,9 @@ const StyledContent = styled(HoverCardPrimitive.Content, {
   },
 });
 
-type HoverCardContentPrimitiveProps = React.ComponentProps<typeof HoverCardPrimitive.Content>;
-type HoverCardContentProps = HoverCardContentPrimitiveProps & { css?: CSS };
-export const Content = React.forwardRef<React.ElementRef<typeof StyledContent>, HoverCardContentProps>(
+type HoverCardPrimitiveProps = React.ComponentProps<typeof HoverCardPrimitive.Content>;
+type HoverCardProps = HoverCardPrimitiveProps & { css?: CSS };
+const Content = React.forwardRef<React.ElementRef<typeof StyledContent>, HoverCardProps>(
   ({ children, ...props }, forwardedRef) => (
     <HoverCardPrimitive.Portal>
       <StyledContent {...props}>{children}</StyledContent>
