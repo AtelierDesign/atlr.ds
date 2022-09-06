@@ -13,10 +13,10 @@ const contentShow = keyframes({
 });
 
 const StyledOverlay = styled(DialogPrimitive.Overlay, {
-  backgroundColor: '$blackA9',
+  backgroundColor: '$blackA8',
   position: 'fixed',
   inset: 0,
-  background: 'rgba(0 0 0 / 0.5)',
+  background: 'rgba(0 0 0 / 0.8)',
   top: 0,
   left: 0,
   right: 0,
@@ -24,14 +24,17 @@ const StyledOverlay = styled(DialogPrimitive.Overlay, {
   display: 'grid',
   placeItems: 'center',
   overflowY: 'auto',
+  zIndex: 999,
   '@media (prefers-reduced-motion: no-preference)': {
     animation: `${overlayShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
   },
 });
 
 const StyledContent = styled(DialogPrimitive.Content, {
-  backgroundColor: '$mauve2',
+  zIndex: 9999,
+  backgroundColor: '$mauve1',
   borderRadius: 16,
+  border: '1px solid $mauve5',
   boxShadow: 'hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px',
   position: 'fixed',
   top: '50%',
@@ -40,7 +43,7 @@ const StyledContent = styled(DialogPrimitive.Content, {
   width: '90vw',
   maxWidth: '430px',
   maxHeight: '85vh',
-  padding: 25,
+  padding: 20,
   '@media (prefers-reduced-motion: no-preference)': {
     animation: `${contentShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
   },
@@ -65,13 +68,13 @@ const StyledTitle = styled(DialogPrimitive.Title, {
   fontFamily: '$pragmatica',
   fontWeight: 500,
   color: '$mauve12',
-  fontSize: 17,
+  fontSize: 18,
 });
 
 const StyledDescription = styled(DialogPrimitive.Description, {
   fontFamily: '$inter',
-  fontWeight: 400,
-  fontSize: 14,
+  fontWeight: 500,
+  fontSize: 13,
   margin: '10px 0 20px',
   color: '$mauve12',
   lineHeight: 1.5,

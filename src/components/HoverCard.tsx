@@ -57,7 +57,7 @@ const Content = React.forwardRef<React.ElementRef<typeof StyledContent>, HoverCa
   ),
 );
 
-const StyledImageTrigger = styled('a', {
+export const ImageTrigger = styled('a', {
   all: 'unset',
   cursor: 'pointer',
   borderRadius: '100%',
@@ -85,5 +85,4 @@ const StyledImg = styled('img', {
 export const HoverCard = HoverCardPrimitive.Root;
 export const HoverCardTrigger = HoverCardPrimitive.Trigger;
 export const HoverCardContent = Content;
-export const ImageTrigger = StyledImageTrigger;
 export const Img = StyledImg;

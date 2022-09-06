@@ -18,7 +18,6 @@ const StyledCollapsible = styled(CollapsiblePrimitive.Root, {
 });
 
 const StyledContent = styled(CollapsiblePrimitive.Content, {
-  // overflow: 'hidden',
   height: 'auto',
   margin: 0,
   padding: 0,

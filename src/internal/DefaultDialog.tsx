@@ -21,9 +21,8 @@ export const DefaultDialog = () => {
         </DialogTrigger>
 
         <DialogContent>
-          <DialogTitle>Default Dialog</DialogTitle>
+          <DialogTitle>Atelier Design</DialogTitle>
           <DialogDescription>Make changes to your profile here. [ Description ]</DialogDescription>
-
           <Flex css={{ marginTop: 25, justifyContent: 'space-between' }}>
             <DialogClose asChild>
               <IconButton aria-label="Close">

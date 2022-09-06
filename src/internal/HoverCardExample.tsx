@@ -8,7 +8,7 @@ export const HoverCardExample = () => {
     <>
       <HoverCard openDelay={0}>
         <HoverCardTrigger asChild>
-          <ImageTrigger href="https://twitter.com/radix_ui" target="_blank" rel="noreferrer noopener">
+          <ImageTrigger href="/" target="_blank" rel="noreferrer noopener">
             <Img src="https://pbs.twimg.com/profile_images/1452849527111684099/tAIKpP7R_400x400.jpg" />
           </ImageTrigger>
         </HoverCardTrigger>
