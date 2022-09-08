@@ -1,51 +1,46 @@
 import React from 'react';
+import { keyframes, styled } from '../../stitches.config';
 import Marquee from 'react-fast-marquee';
-import { styled, CSS } from '../../stitches.config';
 
-const StyledMarqueeContainer = styled('div', {
-  display: 'flex',
-  alignItems: 'center',
-  height: 'auto',
-  width: '100%',
-  minWidth: '100vw',
-  position: 'relative',
-  padding: 0,
-  margin: 0,
-});
+const scroll = keyframes({
+    from: {
+      '0%': {
+        transform: 'translateX(0%)',
+      },
+    },
+    to: {
+      '100%': {
+        transform: 'translateX(-100%)',
+      },
+    },
+  }),
+  StyledMarqueeContainer = styled('div', {
+    display: 'flex',
+    alignItems: 'center',
+    height: 'auto',
+    width: '100%',
+    minWidth: '100vw',
+    position: 'relative',
+    padding: 0,
+    margin: 'auto',
+    overflowX: 'hidden',
+    flexDirection: 'row',
 
-const StyledMarquee = styled('div', {
-  display: 'flex',
-  fontSize: '30px',
-});
+    '&:hover': {
+      animation: 'var(--pause-on-hover)',
+    },
 
-type TextScrollOriginProps = React.FC<typeof Marquee>;
-type TextScrollProps = TextScrollOriginProps & {
-  children?: React.ReactNode;
-  style?: React.CSSProperties;
-  css?: CSS;
-  pauseOnHover?: boolean;
-  pauseOnClick?: boolean;
-  direction?: 'left' | 'right';
-  speed?: number;
-  loop?: number;
-  gradient?: boolean;
-  gradientColor?: [number, number, number];
-  /**
-   * The width of the gradient on either side
-   * Type: string
-   * Default: 200
-   */
-  gradientWidth?: number | string;
-  onFinish?: () => void;
-  /**
-   * A callback for when the marquee finishes a loop. Does not call if maximum loops are reached (use onFinish instead).
-   * Type: Function
-   * Default: null
-   */
-  onCycleComplete?: () => void;
-};
-export const TextScroll = React.forwardRef<React.FC<typeof StyledMarquee>, TextScrollProps>(
-  ({ children, ...props }) => <StyledMarquee {...props}>{children}</StyledMarquee>,
-);
-
+    '&:active': {
+      animation: 'var(--pause-on-click)',
+    },
+  }),
+  StyledContent: any = styled(Marquee, {});
+type MarqueeContentPrimitiveProps = React.ComponentProps<typeof Marquee>;
 export const MarqueeContainer = StyledMarqueeContainer;
+export const MarqueeContent: React.ForwardRefExoticComponent<
+  React.PropsWithoutRef<MarqueeContentPrimitiveProps> & React.RefAttributes<React.ElementRef<typeof StyledContent>>
+> = React.forwardRef<React.ElementRef<typeof StyledContent>, MarqueeContentPrimitiveProps>(({ children, ...props }) => (
+  <StyledMarqueeContainer>
+    <StyledContent {...props}>{children}</StyledContent>
+  </StyledMarqueeContainer>
+));

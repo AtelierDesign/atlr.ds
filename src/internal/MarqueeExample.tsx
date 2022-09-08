@@ -1,17 +1,15 @@
 import React from 'react';
 import { Text } from '../components/Text';
-import { TextScroll, MarqueeContainer } from '../components/TextScroll';
+import { MarqueeContainer, MarqueeContent } from '../components/TextScroll';
 
 export const MarqueeExample = () => {
   return (
     <>
-      <MarqueeContainer>
-        <TextScroll style={{ backgroundColor: 'transparent' }} pauseOnHover={true} gradient={false}>
-          <Text size={3} css={{ fontFamily: '$pragmatica', color: '$mauve12' }}>
-            I can be a React component, multiple React components, or just some text.
-          </Text>
-        </TextScroll>
-      </MarqueeContainer>
+      <MarqueeContent pauseOnHover={true} speed={200} gradient={false} style={{ color: '$mauve12' }}>
+        <MarqueeContainer>
+          <Text css={{ fontSize: 42, fontFamily: '$pragmatica' }}>Lorem ipsum. LOREM IPSUM.</Text>
+        </MarqueeContainer>
+      </MarqueeContent>
     </>
   );
 };
