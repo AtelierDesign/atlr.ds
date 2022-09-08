@@ -3,7 +3,6 @@ import { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
 import Head from 'next/head';
 import { darkTheme, globalCss } from '../../stitches.config';
-import 'nextra-theme-docs/style.css';
 import 'inter-ui/inter.css';
 import '../styles/pragmatica.css';
 import '../styles/LD-Grotesk.css';
