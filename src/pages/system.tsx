@@ -914,12 +914,12 @@ function System() {
         </Box>
         {/* END BADGE */}
 
-        {/* <!-- TEXTSCROLL COMPONENTS --> */}
+        {/* <!-- MARQUEE COMPONENTS --> */}
         <Box css={{ height: 'auto' }}>
           <Section size="3" css={{ bc: '$loContrast' }}>
             <Container size="2" css={{ paddingRight: '0', paddingTop: '15px', paddingBottom: '15px' }}>
-              <Badge size="2" variant="crimson">
-                Marquee®
+              <Badge size="2" variant="orange">
+                Marquee Component®
               </Badge>
             </Container>
             <Section css={{ padding: 0, margin: 0 }}>
@@ -927,7 +927,7 @@ function System() {
             </Section>
           </Section>
         </Box>
-        {/*END EXAMPLE TEXTSCROLL COMPONENT*/}
+        {/*END EXAMPLE MARQUEE COMPONENT*/}
 
         {/* <!-- BANNER COMPONENTS --> */}
         <Box css={{ height: 'auto' }}>
