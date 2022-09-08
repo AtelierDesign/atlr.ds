@@ -36,6 +36,7 @@ import {
   ThemeSwitch,
 } from '../internal';
 import { ChatBubbleIcon, CheckIcon, GitHubLogoIcon, GlobeIcon, TwitterLogoIcon } from '@radix-ui/react-icons';
+import { MarqueeExample } from '../internal/MarqueeExample';
 
 function System() {
   return (
@@ -912,6 +913,21 @@ function System() {
           </Section>
         </Box>
         {/* END BADGE */}
+
+        {/* <!-- TEXTSCROLL COMPONENTS --> */}
+        <Box css={{ height: 'auto' }}>
+          <Section size="3" css={{ bc: '$loContrast' }}>
+            <Container size="2" css={{ paddingRight: '0', paddingTop: '15px', paddingBottom: '15px' }}>
+              <Badge size="2" variant="crimson">
+                Marquee®
+              </Badge>
+            </Container>
+            <Section css={{ padding: 0, margin: 0 }}>
+              <MarqueeExample />
+            </Section>
+          </Section>
+        </Box>
+        {/*END EXAMPLE TEXTSCROLL COMPONENT*/}
 
         {/* <!-- BANNER COMPONENTS --> */}
         <Box css={{ height: 'auto' }}>

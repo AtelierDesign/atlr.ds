@@ -15,11 +15,7 @@
     "sourceMap": true,
     "strict": true,
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "incremental": true,
     "isolatedModules": true
