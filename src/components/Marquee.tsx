@@ -24,7 +24,9 @@ const scroll = keyframes({
     padding: 0,
     margin: 'auto',
     overflowX: 'hidden',
+    overflowY: 'hidden',
     flexDirection: 'row',
+    color: '$gray12',
 
     '&:hover': {
       animation: 'var(--pause-on-hover)',
@@ -34,13 +36,21 @@ const scroll = keyframes({
       animation: 'var(--pause-on-click)',
     },
   }),
-  StyledContent: any = styled(Marquee, {});
+  StyledContent: any = styled(Marquee, {
+    overflow: 'hidden',
+    height: 'auto',
+    animation: `${scroll} var(--duration) linear var(--delay) var(--iteration-count)`,
+  });
 type MarqueeContentPrimitiveProps = React.ComponentProps<typeof Marquee>;
 export const MarqueeContainer = StyledMarqueeContainer;
 export const MarqueeContent: React.ForwardRefExoticComponent<
   React.PropsWithoutRef<MarqueeContentPrimitiveProps> & React.RefAttributes<React.ElementRef<typeof StyledContent>>
-> = React.forwardRef<React.ElementRef<typeof StyledContent>, MarqueeContentPrimitiveProps>(({ children, ...props }) => (
-  <StyledMarqueeContainer>
-    <StyledContent {...props}>{children}</StyledContent>
-  </StyledMarqueeContainer>
-));
+> = React.forwardRef<React.ElementRef<typeof StyledContent>, MarqueeContentPrimitiveProps>(
+  ({ children, ...props }, forwardedRef) => (
+    <StyledMarqueeContainer>
+      <StyledContent {...props} ref={forwardedRef}>
+        {children}
+      </StyledContent>
+    </StyledMarqueeContainer>
+  ),
+);

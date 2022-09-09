@@ -15,6 +15,7 @@ import { HeadingText } from '../components/HeadingText';
 import { Text } from '../components/Text';
 import { IconButton } from '../components/IconButton';
 import { Paragraph } from '../components/Paragraph';
+import { Skeleton } from '../components/Skeleton';
 import { Sup } from '../components/Sup';
 import { Sub } from '../components/Sub';
 import { Grid } from '../components/Grid';
@@ -30,13 +31,14 @@ import {
   ColorSystem,
   DefaultCollapse,
   DefaultDialog,
-  HoverCardExample,
+  MarqueeExample,
+  MarqueeBannerExample,
+  PageFooter,
   SeparatorExample,
   StyledCollapse,
   ThemeSwitch,
 } from '../internal';
 import { ChatBubbleIcon, CheckIcon, GitHubLogoIcon, GlobeIcon, TwitterLogoIcon } from '@radix-ui/react-icons';
-import { MarqueeExample } from '../internal/MarqueeExample';
 
 function System() {
   return (
@@ -558,7 +560,10 @@ function System() {
         </Box>
         {/*END ! SEPARATOR */}
 
-        {/* <!-- BEGIN HOVERCARD --> */}
+        {/* <!-- BEGIN HOVERCARD -->
+
+        <!-- FIX ISSUES -->
+
         <Box css={{ height: 'auto' }}>
           <Section size="3" css={{ bc: '$loContrast' }}>
             <Container size="2" css={{ paddingRight: '0', paddingTop: '15px', paddingBottom: '15px' }}>
@@ -576,7 +581,7 @@ function System() {
             </Container>
           </Section>
         </Box>
-        {/*END ! HOVERCARD */}
+        --> */}
 
         {/* <!-- BEGIN TYPOGRAPHY --> */}
         <Box css={{ bc: '$loContrast' }}>
@@ -914,7 +919,7 @@ function System() {
         </Box>
         {/* END BADGE */}
 
-        {/* <!-- MARQUEE COMPONENTS --> */}
+        {/* <!-- MARQUEE COMPONENT --> */}
         <Box css={{ height: 'auto' }}>
           <Section size="3" css={{ bc: '$loContrast' }}>
             <Container size="2" css={{ paddingRight: '0', paddingTop: '15px', paddingBottom: '15px' }}>
@@ -929,6 +934,21 @@ function System() {
         </Box>
         {/*END EXAMPLE MARQUEE COMPONENT*/}
 
+        {/* <!-- MARQUEE BANNER COMPONENT --> */}
+        <Box css={{ height: 'auto' }}>
+          <Section size="3" css={{ bc: '$loContrast' }}>
+            <Container size="2" css={{ paddingRight: '0', paddingTop: '15px', paddingBottom: '15px' }}>
+              <Badge size="2" variant="orange">
+                Marquee Banner®
+              </Badge>
+            </Container>
+            <Section css={{ padding: 0, margin: 0 }}>
+              <MarqueeBannerExample />
+            </Section>
+          </Section>
+        </Box>
+        {/*END MARQUEE BANNER COMPONENT*/}
+
         {/* <!-- BANNER COMPONENTS --> */}
         <Box css={{ height: 'auto' }}>
           <Section size="3" css={{ bc: '$loContrast' }}>
@@ -939,27 +959,50 @@ function System() {
             </Container>
 
             <Box css={{ padding: '6px', backgroundColor: '$loContrast' }}>
-              <Banner id="banner" size="1" variant="suprLime" rounded="true">
-                <Text size="2" css={{ fontWeight: 600 }}>
-                  Atelier Design Yield® – Example Banner
-                </Text>
-              </Banner>
-
               <Banner id="banner" size="1" variant="blue" rounded="true">
-                <Text size="2" css={{ fontWeight: 600 }}>
-                  Atelier Design Yield® – Example Banner
-                </Text>
+                Atelier Design Yield® – Example Banner Size 1
               </Banner>
 
-              <Banner id="banner" size="2" variant="suprLime" rounded="true">
-                <Text size="2" css={{ fontWeight: 600 }}>
-                  SIZE 2
-                </Text>
+              <Banner id="banner" size="1" variant="gray" rounded="true">
+                Atelier Design Yield® – Example Banner Size 1
+              </Banner>
+
+              <Banner id="banner" size="2" variant="lime" rounded="true">
+                Atelier Design Yield® – Example Banner Size 2
               </Banner>
             </Box>
           </Section>
         </Box>
         {/*END EXAMPLE BANNER COMPONENT*/}
+
+        {/* <!-- SKELETON DEMO --> */}
+        <Box css={{ height: 'auto' }}>
+          <Section size="3" css={{ bc: '$loContrast' }}>
+            <Container size="2" css={{ paddingRight: '0', paddingTop: '15px', paddingBottom: '15px' }}>
+              <Badge size="2" variant="crimson">
+                Skeleton®
+              </Badge>
+            </Container>
+
+            <Container size="2" css={{ marginBottom: '10px' }}>
+              <Flex direction="row" align="stretch" justify="start" wrap="wrap" gap="2" css={{ marginBottom: '30px' }}>
+                <Skeleton variant="avatar4" />
+                <Skeleton variant="avatar3" />
+                <Skeleton variant="avatar2" />
+              </Flex>
+            </Container>
+            <Container size="2" css={{ marginBottom: '10px' }}>
+              <Skeleton variant={'title'} />
+              <Skeleton variant={'heading'} />
+              <Skeleton variant={'text'} />
+              <Skeleton variant={'text'} />
+              <Skeleton variant={'text'} />
+              <Skeleton variant={'shortText'} />
+              <Skeleton variant={'button'} />
+            </Container>
+          </Section>
+        </Box>
+        {/*END SKELETON DEMO*/}
 
         {/* <!-- BEGIN SWITCH--> */}
         <Box css={{ bc: '$loContrast' }}>
@@ -1181,31 +1224,7 @@ function System() {
         {/* <!-- END !  COLOR SYSTEM --> */}
 
         {/* <!-- BEGIN !  FOOTER --> */}
-        <Box
-          css={{
-            backgroundColor: '$loContrast',
-            position: 'relative',
-            height: '100px',
-            margin: 'auto',
-            padding: 0,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            textAlign: 'center',
-          }}
-        >
-          <Text
-            css={{
-              textAlign: 'center',
-              color: '$mauve12',
-              fontFamily: '$pragmatica',
-              fontSize: '10px',
-              lineHeight: '1',
-            }}
-          >
-            Copyright © 2022 Atelier. All rights reserved.
-          </Text>
-        </Box>
+        <PageFooter />
         <CmdK />
       </Box>
     </>

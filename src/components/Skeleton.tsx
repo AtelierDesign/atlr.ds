@@ -6,7 +6,7 @@ const pulse = keyframes({
 });
 
 export const Skeleton = styled('div', {
-  backgroundColor: '$slate4',
+  backgroundColor: '$gray4',
   position: 'relative',
   overflow: 'hidden',
 
@@ -58,19 +58,47 @@ export const Skeleton = styled('div', {
         height: '$9',
         width: '$9',
       },
-      text: {
-        height: '$1',
-      },
       title: {
-        height: '$5',
+        borderRadius: 3,
+        backgroundColor: '$mauve5',
+        height: '45px',
+        maxWidth: '200px',
+        width: '30%',
+        marginTop: 2,
+        marginBottom: 20,
       },
       heading: {
-        height: '$3',
+        borderRadius: 3,
+        backgroundColor: '$mauve5',
+        height: '30px',
+        maxWidth: '300px',
+        width: '50%',
+        marginTop: 2,
+        marginBottom: 16,
+      },
+      text: {
+        borderRadius: 2,
+        backgroundColor: '$mauve5',
+        height: '6px',
+        width: '100%',
+        marginTop: 8,
+        marginBottom: 8,
+      },
+      shortText: {
+        borderRadius: 2,
+        backgroundColor: '$mauve5',
+        height: '6px',
+        maxWidth: '80%',
+        width: '60%',
+        marginTop: 8,
+        marginBottom: 8,
       },
       button: {
-        borderRadius: '$1',
+        borderRadius: 6,
         height: '$5',
-        width: '$8',
+        width: '$9',
+        marginTop: 14,
+        marginBottom: 14,
       },
     },
   },

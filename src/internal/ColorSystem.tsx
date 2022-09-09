@@ -10,13 +10,19 @@ export const ColorSystem = () => {
     <>
       {/* <!-- BEGIN COLOR SECTION --> */}
       <Box css={{ bc: '$loContrast' }}>
-        <Section size='3'>
-          <Container size='2' css={{ paddingRight: '0', paddingTop: '15px', paddingBottom: '15px' }}>
-            <Badge size='2' variant='gray'>
+        <Section size="3">
+          <Container size="2" css={{ paddingRight: '0', paddingTop: '15px', paddingBottom: '15px' }}>
+            <Badge size="2" variant="gray">
               Color System
             </Badge>
           </Container>
+          <Container size="2" css={{ paddingRight: '0', paddingTop: '15px', paddingBottom: '15px' }}>
+            <Badge size="2" variant="lime">
+              Coming Soon
+            </Badge>
+          </Container>
 
+          {/* <!-- HOLD COLOR SYSTEM: While Transition to Rhythm -->
           <Container size='2' css={{ marginBottom: '10px' }}>
             <Box css={{ width: '100%', height: '$4', backgroundColor: '$mauve12', margin: 'auto' }}>
               <Text size='1' css={{ color: '$gray1', textAlign: 'center', lineHeight: '$4', paddingTop: '4px' }}>
@@ -92,6 +98,7 @@ export const ColorSystem = () => {
             <Box css={{ width: '100%', height: '$4', backgroundColor: '$lime2' }} />
             <Box css={{ width: '100%', height: '$4', backgroundColor: '$lime1' }} />
           </Container>
+          --> */}
         </Section>
       </Box>
     </>
