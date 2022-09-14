@@ -1,5 +1,4 @@
 import { styled } from '../../stitches.config';
-
 export const BlurCanvas = styled('div', {
   zIndex: '18',
   backgroundColor: '$blur',

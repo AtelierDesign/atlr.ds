@@ -1,6 +1,6 @@
 {
   "name": "atlr.ds",
-  "packageManager": "npm@8.1.0",
+  "packageManager": "npm@8.12.1",
   "version": "0.0.1",
   "description": "Component library for shared UI @AtelierDesign",
   "main": "dist/index.js",

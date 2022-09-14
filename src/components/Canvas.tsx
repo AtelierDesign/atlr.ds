@@ -1,6 +1,5 @@
 import React from 'react';
 import { styled } from '../../stitches.config';
-
 export const Canvas = styled('div', {
   zIndex: '20',
   backgroundColor: 'transparent',

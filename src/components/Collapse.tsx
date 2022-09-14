@@ -25,7 +25,7 @@ const StyledContent = styled(CollapsiblePrimitive.Content, {
   // '&[data-state="closed"]': { animation: `${close} 400ms ease-out` },
 });
 
-// Exports
+// exports..
 export const Collapsible = StyledCollapsible;
 export const CollapsibleTrigger = CollapsiblePrimitive.Trigger;
 export const CollapsibleContent = StyledContent;

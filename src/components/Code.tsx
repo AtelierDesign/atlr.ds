@@ -1,5 +1,4 @@
 import { styled } from '../../stitches.config';
-
 export const Code = styled('span', {
   lineHeight: '2',
   margin: '0',
@@ -8,7 +7,6 @@ export const Code = styled('span', {
   fontVariantNumeric: 'tabular-nums',
   display: 'block',
   color: '$mauve12',
-
   variants: {
     size: {
       '1': {

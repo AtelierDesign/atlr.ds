@@ -1,5 +1,4 @@
 import { styled } from '../../stitches.config';
-
 export const Banner = styled('div', {
   zIndex: '999',
   boxSizing: 'border-box',

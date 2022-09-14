@@ -1,5 +1,6 @@
 // internal components
 export * from './BasicAtelierToast';
+export * from './BasicCommand';
 export * from './ColorSystem';
 export * from './Command-K';
 export * from './DarkThemeButton';

@@ -1,5 +1,5 @@
 module.exports = {
-  webpack: (config, options) => {
+  webpack: config => {
     config.resolve.alias = {
       ...config.resolve.alias,
       'react-dom$': 'react-dom/profiling',

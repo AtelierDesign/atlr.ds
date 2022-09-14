@@ -3,11 +3,7 @@ import { CSS, keyframes, styled } from '../../stitches.config';
 import { ChevronDownIcon } from '@radix-ui/react-icons';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 
-/*
- * <!--
- * Accordion.ROOT
- * -->
- */
+// Accordion.Root..
 const StyledAccordion = styled(AccordionPrimitive.Root, {
   border: '2px solid $gray4',
   borderRadius: '10px',
@@ -32,14 +28,10 @@ export const Accordion = React.forwardRef<React.ElementRef<typeof StyledAccordio
     <StyledAccordion ref={forwardedRef} {...props} {...(props.type === 'single' ? { collapsible: true } : {})}>
       {children}
     </StyledAccordion>
-  ),
+  )
 );
 
-/*
- * <!--
- * Accordion.ITEM
- * -->
- */
+// Accordion.Item..
 type AccordionItemPrimitiveProps = React.ComponentProps<typeof AccordionPrimitive.Item>;
 type AccordionItemProps = AccordionItemPrimitiveProps & { css?: CSS };
 
@@ -71,14 +63,10 @@ export const AccordionItem = React.forwardRef<React.ElementRef<typeof StyledItem
     <StyledItem {...props} ref={forwardedRef}>
       {children}
     </StyledItem>
-  ),
+  )
 );
 
-/*
- * <!--
- * Accordion.TRIGGER
- * -->
- */
+// Accordion.Trigger..
 const StyledHeader = styled(AccordionPrimitive.Header, {
   paddingTop: '3px',
   borderRadius: '8px',
@@ -140,7 +128,6 @@ const StyledTrigger = styled(AccordionPrimitive.Trigger, {
     transition: 'transform 175ms cubic-bezier(0.65, 0, 0.35, 1)',
   },
 
-  // hoverStyles..
   '&:hover': {
     backgroundColor: '$gray4',
     '&:first-child': {
@@ -178,14 +165,10 @@ export const AccordionTrigger = React.forwardRef<React.ElementRef<typeof StyledT
         <StyledChevron />
       </StyledTrigger>
     </StyledHeader>
-  ),
+  )
 );
 
-/*
- * <!--
- * Accordion.CONTENT
- * -->
- */
+// Accordion.Content
 type AccordionContentPrimitiveProps = React.ComponentProps<typeof AccordionPrimitive.Content>;
 type AccordionContentProps = AccordionContentPrimitiveProps & { css?: CSS };
 
@@ -206,8 +189,6 @@ const StyledContent = styled(AccordionPrimitive.Content, {
   '&[data-state="closed"]': {
     animation: `${slideUp} 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
   },
-
-  // '&:last-of-type': { borderBottom: '0px' },
 });
 
 const StyledContentText = styled('div', {
@@ -221,5 +202,5 @@ export const AccordionContent = React.forwardRef<React.ElementRef<typeof StyledC
         <StyledContentText>{children}</StyledContentText>
       </StyledContent>
     </StyledHeader>
-  ),
+  )
 );

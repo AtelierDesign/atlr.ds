@@ -1,5 +1,4 @@
 import { styled } from '../../stitches.config';
-
 export const Button = styled('button', {
   all: 'unset',
   alignItems: 'center',
@@ -12,14 +11,12 @@ export const Button = styled('button', {
     boxSizing: 'border-box',
   },
 
-  // reset..
   display: 'inline-flex',
   flexShrink: 0,
   justifyContent: 'center',
   lineHeight: '1',
   WebkitTapHighlightColor: 'rgba(0,0,0,0)',
 
-  // ... customs ...
   height: '$5',
   px: '$2',
   fontFamily: '$untitled',

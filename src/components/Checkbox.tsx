@@ -1,7 +1,6 @@
 import React from 'react';
 import { styled } from '../../stitches.config';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
-
 const StyledCheckbox = styled(CheckboxPrimitive.Root, {
   all: 'unset',
   backgroundColor: '$mauve2',

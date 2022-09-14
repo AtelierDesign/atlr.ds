@@ -1,5 +1,4 @@
 import { styled } from '../../stitches.config';
-
 export const Card = styled('div', {
   appearance: 'none',
   border: 'none',
