@@ -19,7 +19,6 @@ export const IconButton = styled('button', {
   WebkitTapHighlightColor: 'transparent',
   color: '$air6',
 
-
   '&::before': {
     boxSizing: 'border-box',
   },
@@ -120,8 +119,7 @@ export const IconButton = styled('button', {
         },
         '&:focus': {
           borderColor: '$slate8',
-          boxShadow:
-            '0 0 0 1px $colors$slate8, 0 16px 32px hsl(206deg 12% 5% / 25%), 0 3px 5px hsl(0deg 0% 0% / 10%)',
+          boxShadow: '0 0 0 1px $colors$slate8, 0 16px 32px hsl(206deg 12% 5% / 25%), 0 3px 5px hsl(0deg 0% 0% / 10%)',
         },
         '&:active': {
           backgroundColor: '$slate4',

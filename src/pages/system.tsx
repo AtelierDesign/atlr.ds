@@ -23,6 +23,7 @@ import { AtelierSwitch } from '../components/Switch';
 import { Checkbox, CheckboxIndicator, CheckboxLabel } from '../components/Checkbox';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/Tabs';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/Accordion';
+import { Lxgo } from '../components/Lxgo';
 
 // internals..
 import {
@@ -48,6 +49,7 @@ function System() {
       {/* <!-- SIDEBAR QUICKNAV COMPONENT -->
           <QuickNav />
         // END ! SIDEBAR QUICKNAV COMPONENT --> */}
+
       {/*  <!-- <!-- END !  HIDDEN COMPONENTS --> --> */}
 
       <Box css={{ backgroundColor: '$loContrast' }}>
@@ -105,7 +107,18 @@ function System() {
         {/* <!-- HERO CONTAINER --> */}
         <Box css={{ bc: '$loContrast', height: 'auto' }}>
           <Section size="3" css={{}}>
-            <Container size="4" css={{ paddingTop: '30px' }}>
+            <Container
+              size="4"
+              css={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                margin: 'auto',
+                justifyContent: 'center',
+                paddingTop: '30px',
+              }}
+            >
+              {/* <!--}
               <Text
                 as="h3"
                 size="3"
@@ -113,6 +126,10 @@ function System() {
               >
                 ATELIER® DS
               </Text>
+              --> */}
+
+              <Lxgo width="300" />
+              <Space size="1" />
               <Paragraph size="2" css={{ ta: 'center' }}>
                 Environment for testing Atelier® DS.
               </Paragraph>
