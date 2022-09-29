@@ -35,10 +35,10 @@ export const Button = styled('button', {
     size: {
       '1': {
         borderRadius: '6px',
-        height: '$5',
+        height: '100%',
         px: '$2',
         fontSize: '$1',
-        lineHeight: '$sizes$5',
+        lineHeight: '$sizes$4',
       },
       '2': {
         borderRadius: '8px',
