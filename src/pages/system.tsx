@@ -23,7 +23,6 @@ import { AtelierSwitch } from '../components/Switch';
 import { Checkbox, CheckboxIndicator, CheckboxLabel } from '../components/Checkbox';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/Tabs';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/Accordion';
-import { Lxgo } from '../components/Lxgo';
 
 // internals..
 import {
@@ -34,6 +33,7 @@ import {
   DefaultDialog,
   MarqueeExample,
   MarqueeBannerExample,
+  Lxgo,
   PageFooter,
   SeparatorExample,
   StyledCollapse,

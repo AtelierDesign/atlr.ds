@@ -8,6 +8,7 @@ export * from './DefaultCollapse';
 export * from './DefaultDialog';
 export * from './HeroDisplay';
 export * from './HoverCardExample';
+export * from './Lxgo';
 export * from './MarqueeBannerExample';
 export * from './MarqueeExample';
 export * from './Nothing';

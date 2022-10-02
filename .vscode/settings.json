@@ -1,6 +1,6 @@
 {
   "files.autoSave": "onWindowChange",
-  "editor.fontSize": 11,
+  "editor.fontSize": 10,
   "editor.fontFamily": "Associate Mono, monospace",
   "editor.tabSize": 2,
   "workbench.colorTheme": "Copilot Theme",
