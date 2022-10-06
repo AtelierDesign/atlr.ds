@@ -1,30 +1,83 @@
-import React from 'react';
-import Moment from 'react-moment';
-import moment from 'moment';
-import { Text } from '../components/Text';
+import { useCallback, useEffect, useState } from 'react';
+import * as React from 'react';
+import { styled } from '../../stitches.config';
 
-export function TimeCode() {
-  const currentTime = moment().format('LTS');
+import { Box } from '../components/Box';
+
+const StyledTime = styled('div', {
+  border: 'none',
+  display: 'inline-flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  textTransform: 'uppercase',
+  fontFamily: '$pragmatica',
+  fontWeight: 'normal',
+  fontSize: 13,
+  color: '$mauve9',
+  padding: 0,
+  margin: 'auto',
+  width: 'auto',
+  '> :span': {
+    display: 'inline-flex',
+    justifyContent: 'center',
+    flexGrow: 1,
+    alignItems: 'center',
+  },
+});
+
+const TimeString = StyledTime;
+
+export const TimeCode = ({ variant }: { variant?: 'mobile' }) => {
+  const [now, setNow] = useState(new Date());
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setNow(new Date());
+    }, 1000);
+
+    return () => {
+      window.clearInterval(interval);
+    };
+  }, []);
+
+  const renderTime = useCallback((date: Date) => {
+    let hours: number | string = date.getHours();
+    let minutes: number | string = date.getMinutes();
+    let seconds: number | string = date.getSeconds();
+    const isAm = hours <= 12;
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    return (
+      <TimeString>
+        <span>
+          {hours}:{minutes}:{seconds} <span>{isAm ? 'AM' : 'PM'}</span>
+        </span>
+      </TimeString>
+    );
+  }, []);
 
   return (
     <>
-      <Text
-        size="1"
+      <Box
         css={{
-          color: '$mauveA9',
-          lineHeight: '34px',
-          fontFamily: '$pragmatica',
-          fontWeight: 'bold',
+          display: 'flex',
           alignItems: 'center',
-          textAlign: 'center',
-          '&:hover': {
-            cursor: 'pointer',
-            color: '$mauveA8',
-          },
+          px: '$$px',
+          height: '100%',
+          ...(variant === 'mobile'
+            ? {
+                flexGrow: 1,
+                justifyContent: 'center',
+              }
+            : undefined),
         }}
       >
-        <Moment format="AY© hh:mm:ss" interval={1000} />
-      </Text>
+        <Box css={{ marginRight: 8, fontFamily: '$pragmatica' }} />
+        {renderTime(now)}
+      </Box>
     </>
   );
-}
+};
