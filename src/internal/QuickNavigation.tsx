@@ -1,31 +1,31 @@
 import React from 'react';
-import { Box } from './Box';
-import { Text } from './Text';
-import { HeadingText } from './HeadingText';
-import { Link } from './Link';
-import { Skeleton } from './Skeleton';
+import { Box } from '../components/Box';
+import { Text } from '../components/Text';
+import { HeadingText } from '../components/HeadingText';
+import { Link } from '../components/Link';
+import { Skeleton } from '../components/Skeleton';
 import { styled } from '../../stitches.config';
-import { ScrollArea } from './ScrollArea';
+import { ScrollArea } from '../components/ScrollArea';
 
 const QuickNavUl = styled('ul', {
   listStyleType: 'none',
   p: 0,
-  m: 0,
+  m: 0
 });
 
 const QuickNavLink = styled(Link, {
-  color: '$slate11',
+  color: '$mauve11',
   display: 'inline-flex',
   my: '$1',
 
   '[data-level="2"] ~ [data-level="3"] &': {
-    marginLeft: '$5',
-  },
+    marginLeft: '$5'
+  }
 });
 
 const QuickNavText = styled(Text, {
-  color: 'inherit',
-  lineHeight: '20px',
+  color: '$mauve12',
+  lineHeight: '20px'
 });
 
 export function QuickNavigation() {
@@ -50,10 +50,10 @@ export function QuickNavigation() {
         css={{
           padding: '$5',
           py: 68,
-          display: headings.length === 0 ? 'none' : 'block',
+          display: headings.length === 0 ? 'none' : 'block'
         }}
       >
-        <HeadingText css={{ mb: '$3' }} id="site-quick-nav-heading">
+        <HeadingText css={{ mb: '$3', color: '$mauve12' }} id="site-quick-nav-heading">
           Quick nav
         </HeadingText>
         <QuickNavUl>

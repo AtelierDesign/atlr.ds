@@ -12,5 +12,16 @@
     "react/no-unknown-property": "off",
     "react/display-name": "off",
     "import/no-anonymous-default-export": "off"
-  }
+  },
+  "ignorePatterns": [
+    "next.config.js",
+    "next-sitemap.config.js",
+    "src/lib/gsap/*",
+    "./src/lib/gsap/*",
+    "./public/*",
+    "./.next/*",
+    "./node_modules/*",
+    "./.husky/*",
+    "/public/*"
+  ]
 }

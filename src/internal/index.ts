@@ -12,6 +12,7 @@ export * from './MarqueeBannerExample';
 export * from './MarqueeExample';
 export * from './Nothing';
 export * from './PageFooter';
+export * from './QuickNavigation';
 export * from './SeparatorExample';
 export * from './StyledCollapse';
 export * from './ThemeSwitch';
