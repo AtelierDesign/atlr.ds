@@ -94,7 +94,7 @@ function System() {
 
         {/*END APPBAR*/}
 
-        {/* <!-- EXAMPLE BANNER COMPONENT --> */}
+        {/* <!-- EXAMPLE BANNER COMPONENT 
         <Box css={{ padding: '6px', backgroundColor: '$loContrast' }}>
           <Banner id="banner" size="1" variant="suprLime" rounded="true">
             <Text size="2" css={{ fontWeight: 500 }}>
@@ -102,7 +102,7 @@ function System() {
             </Text>
           </Banner>
         </Box>
-        {/*END EXAMPLE BANNER COMPONENT*/}
+*/}
 
         {/* <!-- HERO CONTAINER --> */}
         <Box css={{ bc: '$loContrast', height: 'auto' }}>

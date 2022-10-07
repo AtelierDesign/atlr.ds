@@ -1,19 +1,30 @@
 import { useCallback, useEffect, useState } from 'react';
 import * as React from 'react';
 import { styled } from '../../stitches.config';
+<<<<<<< Updated upstream
 
 import { Box } from '../components/Box';
 
+=======
+import { Box } from '../components/Box';
+
+>>>>>>> Stashed changes
 const StyledTime = styled('div', {
   border: 'none',
   display: 'inline-flex',
   justifyContent: 'center',
   alignItems: 'center',
   textTransform: 'uppercase',
+<<<<<<< Updated upstream
   fontFamily: '$pragmatica',
   fontWeight: 'normal',
   fontSize: 13,
   color: '$mauve9',
+=======
+  fontFamily: '$mono',
+  fontWeight: 'normal',
+  fontSize: 14,
+>>>>>>> Stashed changes
   padding: 0,
   margin: 'auto',
   width: 'auto',
@@ -75,7 +86,11 @@ export const TimeCode = ({ variant }: { variant?: 'mobile' }) => {
             : undefined),
         }}
       >
+<<<<<<< Updated upstream
         <Box css={{ marginRight: 8, fontFamily: '$pragmatica' }} />
+=======
+        <Box css={{ marginRight: 8 }} />
+>>>>>>> Stashed changes
         {renderTime(now)}
       </Box>
     </>

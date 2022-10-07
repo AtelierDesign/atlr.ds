@@ -1,6 +1,6 @@
 import { styled } from '../../stitches.config';
 
-import type * as React from 'react';
+import React from 'react';
 
 export interface LxgoProps extends React.SVGAttributes<SVGElement> {
   children?: never;

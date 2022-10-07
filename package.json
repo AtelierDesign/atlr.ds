@@ -73,6 +73,7 @@
     "publishConfig": {
         "registry": "https://registry.npmjs.org"
     },
+<<<<<<< Updated upstream
     "prettier": {
         "semi": true,
         "singleQuote": true,
@@ -81,6 +82,8 @@
         "printWidth": 120,
         "trailingComma": "none"
     },
+=======
+>>>>>>> Stashed changes
     "author": "chvndler <chan@ady.world>",
     "license": "MIT",
     "bugs": {

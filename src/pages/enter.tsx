@@ -28,13 +28,16 @@ function Enter() {
             }}
           >
             <Text
-              size="3"
               css={{
+                fontSize: 24,
                 fontFamily: '$pragmatica',
                 fontWeight: 'bold',
                 color: '$mauve12',
                 textAlign: 'center',
                 paddingBottom: '10px',
+                '@sm': {
+                  fontSize: 16,
+                },
               }}
             >
               developer.atlrdsgn.com
