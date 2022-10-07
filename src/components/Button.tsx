@@ -35,11 +35,7 @@ export const Button = styled('button', {
     size: {
       '1': {
         borderRadius: '6px',
-<<<<<<< Updated upstream
-        height: '$5',
-=======
         height: '26px',
->>>>>>> Stashed changes
         px: '$2',
         fontSize: '$1',
         lineHeight: '$sizes$4',

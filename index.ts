@@ -5,9 +5,10 @@
 
 // (a)...
 export { Accordion, AccordionTrigger, AccordionItem, AccordionContent } from './src/components/Accordion';
-export { AppBar } from './src/components/AppBar';
+export { AppBar } from './atlr.ds/AppBar';
 
 // (b)...
+
 export { Badge } from './src/components/Badge';
 export { Banner } from './src/components/Banner';
 export { BlurCanvas } from './src/components/BlurCanvas';
