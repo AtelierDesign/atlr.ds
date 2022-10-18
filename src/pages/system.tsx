@@ -37,21 +37,13 @@ import {
   PageFooter,
   SeparatorExample,
   StyledCollapse,
-  ThemeSwitch,
+  ThemeSwitch
 } from '../internal';
 import { ChatBubbleIcon, CheckIcon, GitHubLogoIcon, GlobeIcon, TwitterLogoIcon } from '@radix-ui/react-icons';
 
 function System() {
   return (
     <>
-      {/*  <!-- <!-- HIDDEN COMPONENTS --> --> */}
-
-      {/* <!-- SIDEBAR QUICKNAV COMPONENT -->
-          <QuickNav />
-        // END ! SIDEBAR QUICKNAV COMPONENT --> */}
-
-      {/*  <!-- <!-- END !  HIDDEN COMPONENTS --> --> */}
-
       <Box css={{ backgroundColor: '$loContrast' }}>
         {/* <!-- App Bar --> */}
         <AppBar
@@ -71,8 +63,8 @@ function System() {
                 lineHeight: '32px',
                 '&:hover': {
                   textDecoration: 'underline',
-                  cursor: 'pointer',
-                },
+                  cursor: 'pointer'
+                }
               }}
             >
               home
@@ -84,7 +76,7 @@ function System() {
               fontWeight: 'normal',
               textAlign: 'center',
               letterSpacing: '-0.03rem',
-              lineHeight: '32px',
+              lineHeight: '32px'
             }}
           >
             <strong>ATELIER</strong>® DS
@@ -115,7 +107,7 @@ function System() {
                 alignItems: 'center',
                 margin: 'auto',
                 justifyContent: 'center',
-                paddingTop: '30px',
+                paddingTop: '30px'
               }}
             >
               {/* <!--}
@@ -136,6 +128,7 @@ function System() {
             </Container>
           </Section>
         </Box>
+
         {/*END HERO CONTAINER*/}
 
         {/* <!-- BEGIN SECTION DEMO --> */}
@@ -154,7 +147,7 @@ function System() {
                   color: '$mauve9',
                   fontFamily: '$pragmatica',
                   fontSize: '9px',
-                  lineHeight: '1',
+                  lineHeight: '1'
                 }}
               >
                 Section Size 3
@@ -168,7 +161,7 @@ function System() {
                   color: '$mauve9',
                   fontFamily: '$pragmatica',
                   fontSize: '9px',
-                  lineHeight: '1',
+                  lineHeight: '1'
                 }}
               >
                 Section Size 2
@@ -182,7 +175,7 @@ function System() {
                   color: '$mauve9',
                   fontFamily: '$pragmatica',
                   fontSize: '9px',
-                  lineHeight: '1',
+                  lineHeight: '1'
                 }}
               >
                 Section Size 1
@@ -190,6 +183,7 @@ function System() {
             </Section>
           </Section>
         </Box>
+
         {/*END ! SECTION DEMO*/}
 
         {/* <!-- BEGIN CONTAINER DEMO --> */}
@@ -208,7 +202,7 @@ function System() {
                   color: '$mauve9',
                   fontFamily: '$pragmatica',
                   fontSize: '9px',
-                  lineHeight: '38px',
+                  lineHeight: '38px'
                 }}
               >
                 Container Size 4 <strong>[ no maxWidth ]</strong>
@@ -222,7 +216,7 @@ function System() {
                   color: '$mauve9',
                   fontFamily: '$pragmatica',
                   fontSize: '9px',
-                  lineHeight: '38px',
+                  lineHeight: '38px'
                 }}
               >
                 Container Size 3 <strong>[ maxWidth = '1145px' ]</strong>
@@ -236,7 +230,7 @@ function System() {
                   color: '$mauve9',
                   fontFamily: '$pragmatica',
                   fontSize: '9px',
-                  lineHeight: '38px',
+                  lineHeight: '38px'
                 }}
               >
                 Container Size 2 <strong>[ maxWidth = '715px' ]</strong>
@@ -250,7 +244,7 @@ function System() {
                   color: '$mauve9',
                   fontFamily: '$pragmatica',
                   fontSize: '9px',
-                  lineHeight: '38px',
+                  lineHeight: '38px'
                 }}
               >
                 Container Size 1 <strong>[ maxWidth = '430px' ]</strong>
@@ -276,11 +270,11 @@ function System() {
                 gap="2"
                 css={{
                   '@md': {
-                    gridTemplateColumns: 'repeat(2, 1fr)',
+                    gridTemplateColumns: 'repeat(2, 1fr)'
                   },
                   '@sm': {
-                    gridTemplateColumns: 'repeat(1, 1fr)',
-                  },
+                    gridTemplateColumns: 'repeat(1, 1fr)'
+                  }
                 }}
               >
                 <Box
@@ -290,7 +284,7 @@ function System() {
                     height: '30px',
                     border: '1px solid $mauve5',
                     borderRadius: 6,
-                    padding: 6,
+                    padding: 6
                   }}
                 >
                   <Text
@@ -299,7 +293,7 @@ function System() {
                       color: '$mauve8',
                       paddingTop: '4px',
                       fontFamily: '$pragmatica',
-                      fontSize: '9px',
+                      fontSize: '9px'
                     }}
                   >
                     Box . 01
@@ -312,7 +306,7 @@ function System() {
                     height: '30px',
                     border: '1px solid $mauve5',
                     borderRadius: 6,
-                    padding: 6,
+                    padding: 6
                   }}
                 >
                   <Text
@@ -321,7 +315,7 @@ function System() {
                       color: '$mauve8',
                       paddingTop: '4px',
                       fontFamily: '$pragmatica',
-                      fontSize: '9px',
+                      fontSize: '9px'
                     }}
                   >
                     Box . 02
@@ -334,7 +328,7 @@ function System() {
                     height: '30px',
                     border: '1px solid $mauve5',
                     borderRadius: 6,
-                    padding: 6,
+                    padding: 6
                   }}
                 >
                   <Text
@@ -343,7 +337,7 @@ function System() {
                       color: '$mauve8',
                       paddingTop: '4px',
                       fontFamily: '$pragmatica',
-                      fontSize: '9px',
+                      fontSize: '9px'
                     }}
                   >
                     Box . 03
@@ -356,7 +350,7 @@ function System() {
                     height: '30px',
                     border: '1px solid $mauve5',
                     borderRadius: 6,
-                    padding: 6,
+                    padding: 6
                   }}
                 >
                   <Text
@@ -365,7 +359,7 @@ function System() {
                       color: '$mauve8',
                       paddingTop: '4px',
                       fontFamily: '$pragmatica',
-                      fontSize: '9px',
+                      fontSize: '9px'
                     }}
                   >
                     Box . 04
@@ -394,7 +388,7 @@ function System() {
                     height: '30px',
                     border: '1px solid $mauve5',
                     borderRadius: 6,
-                    padding: 6,
+                    padding: 6
                   }}
                 >
                   <Text
@@ -403,7 +397,7 @@ function System() {
                       color: '$mauve8',
                       paddingTop: '4px',
                       fontFamily: '$pragmatica',
-                      fontSize: '9px',
+                      fontSize: '9px'
                     }}
                   >
                     Box . 01
@@ -417,7 +411,7 @@ function System() {
                     height: '30px',
                     border: '1px solid $mauve5',
                     borderRadius: 6,
-                    padding: 6,
+                    padding: 6
                   }}
                 >
                   <Text
@@ -426,7 +420,7 @@ function System() {
                       color: '$mauve8',
                       paddingTop: '4px',
                       fontFamily: '$pragmatica',
-                      fontSize: '9px',
+                      fontSize: '9px'
                     }}
                   >
                     Box . 01
@@ -440,7 +434,7 @@ function System() {
                     height: '30px',
                     border: '1px solid $mauve5',
                     borderRadius: 6,
-                    padding: 6,
+                    padding: 6
                   }}
                 >
                   <Text
@@ -449,7 +443,7 @@ function System() {
                       color: '$mauve8',
                       paddingTop: '4px',
                       fontFamily: '$pragmatica',
-                      fontSize: '9px',
+                      fontSize: '9px'
                     }}
                   >
                     Box . 01
@@ -463,7 +457,7 @@ function System() {
                     height: '30px',
                     border: '1px solid $mauve5',
                     borderRadius: 6,
-                    padding: 6,
+                    padding: 6
                   }}
                 >
                   <Text
@@ -472,7 +466,7 @@ function System() {
                       color: '$mauve8',
                       paddingTop: '4px',
                       fontFamily: '$pragmatica',
-                      fontSize: '9px',
+                      fontSize: '9px'
                     }}
                   >
                     Box . 01
@@ -486,7 +480,7 @@ function System() {
                     height: '30px',
                     border: '1px solid $mauve5',
                     borderRadius: 6,
-                    padding: 6,
+                    padding: 6
                   }}
                 >
                   <Text
@@ -495,7 +489,7 @@ function System() {
                       color: '$mauve8',
                       paddingTop: '4px',
                       fontFamily: '$pragmatica',
-                      fontSize: '9px',
+                      fontSize: '9px'
                     }}
                   >
                     Box . 01
@@ -523,7 +517,7 @@ function System() {
                     color: '$mauve8',
                     paddingTop: '2px',
                     fontFamily: '$pragmatica',
-                    fontSize: '9px',
+                    fontSize: '9px'
                   }}
                 >
                   Space / Size = 1 <strong>( 14px )</strong>
@@ -537,7 +531,7 @@ function System() {
                     color: '$mauve8',
                     paddingTop: '4px',
                     fontFamily: '$pragmatica',
-                    fontSize: '9px',
+                    fontSize: '9px'
                   }}
                 >
                   Space / Size = 2 <strong>( 40px )</strong>
@@ -551,7 +545,7 @@ function System() {
                     color: '$mauve8',
                     paddingTop: '4px',
                     fontFamily: '$pragmatica',
-                    fontSize: '9px',
+                    fontSize: '9px'
                   }}
                 >
                   Space / Size = 3 <strong>( 80px )</strong>
@@ -739,7 +733,7 @@ function System() {
                   fontWeight: 'bold',
                   padding: '2px',
                   paddingBottom: '12px',
-                  color: '$mauve9',
+                  color: '$mauve9'
                 }}
               >
                 size one
@@ -771,7 +765,7 @@ function System() {
                   fontWeight: 'bold',
                   padding: '2px',
                   paddingBottom: '12px',
-                  color: '$mauve9',
+                  color: '$mauve9'
                 }}
               >
                 size two
@@ -803,7 +797,7 @@ function System() {
                   fontWeight: 'bold',
                   padding: '2px',
                   paddingBottom: '12px',
-                  color: '$mauve9',
+                  color: '$mauve9'
                 }}
               >
                 size three
@@ -835,7 +829,7 @@ function System() {
                   fontWeight: 'normal',
                   padding: '2px',
                   paddingBottom: '12px',
-                  color: '$mauve9',
+                  color: '$mauve9'
                 }}
               >
                 atelier. ghost. raised.
@@ -863,7 +857,7 @@ function System() {
                   fontWeight: 'bold',
                   padding: '2px',
                   paddingBottom: '12px',
-                  color: '$mauve9',
+                  color: '$mauve9'
                 }}
               >
                 size one
@@ -894,7 +888,7 @@ function System() {
                   fontWeight: 'bold',
                   padding: '2px',
                   paddingBottom: '12px',
-                  color: '$mauve9',
+                  color: '$mauve9'
                 }}
               >
                 size two
@@ -926,7 +920,7 @@ function System() {
                   fontWeight: '400',
                   padding: '2px',
                   paddingBottom: '12px',
-                  color: '$mauve9',
+                  color: '$mauve9'
                 }}
               >
                 ..gray ..lime ..blue ..purple ..orange ..indigo ..cyan ..green ..gold

@@ -4,6 +4,7 @@ import { ThemeProvider } from 'next-themes';
 import Head from 'next/head';
 import { darkTheme, globalCss } from '../../stitches.config';
 import 'inter-ui/inter.css';
+import '../styles/okaidia.css';
 import '../styles/pragmatica.css';
 import '../styles/LD-Grotesk.css';
 import '../styles/untitled-sans.css';
@@ -17,7 +18,7 @@ const globalStyles = globalCss(res, {
     overflowX: 'hidden',
     backgroundColor: '$mauve1',
 
-    minHeight: '-webkit-fill-available',
+    minHeight: '-webkit-fill-available'
   },
   body: {
     margin: 0,
@@ -26,8 +27,8 @@ const globalStyles = globalCss(res, {
     minHeight: '-webkit-fill-available',
     WebkitTextSizeAdjust: '100%',
     WebkitFontSmoothing: 'antialiased',
-    MozOsxFontSmoothing: 'grayscale',
-  },
+    MozOsxFontSmoothing: 'grayscale'
+  }
 });
 
 const App = ({ Component, pageProps }: AppProps) => {
