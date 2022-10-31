@@ -4,7 +4,7 @@
  */
 
 // (a)...
-export { AppBar } from './atlr.ds/AppBar';
+export { Appbar } from './atlr.ds/Appbar';
 
 // (b)...
 export { Badge } from './atlr.ds/Badge';
